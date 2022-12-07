@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0 22px 20px;
+  background-color: #fff;
+}
+.header__logo {
+  height: 35px;
+  margin-left: 67px;
+
+  @media (min-width: @tablet-width) {
+    height: 46px;
+    margin-left: 0;
+  }
+  @media (min-width: @desktop-width) {
+    height: 72px;
+  }
+}
+.header__toggle{
+  display: block;
+  width: 20px;
+  height: 14px;
+
+  @media (min-width: @tablet-width) {
+  display: none;
+  }
+}
+
