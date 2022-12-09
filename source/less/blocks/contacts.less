@@ -42,9 +42,18 @@
 }
 .card-contacts-link{
   display: block;
-  width: 176px;
-  align-items: center;
+  max-width: 230px;
   margin-top: 25px;
   margin-bottom: 25px;
-  margin-left: 200px;
+  padding: 16px 37px;
+  align-self: center;
+  @media (min-width:@tablet-width){
+    margin-left: 219px;
+    max-width: 176px;
+  }
+
+  @media (min-width:@desktop-width){
+    margin-left: 175px;
+  }
+
 }

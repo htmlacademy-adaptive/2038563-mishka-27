@@ -1,25 +1,109 @@
 .main-nav {
   display: none;
 
-
   @media (min-width:  @tablet-width) {
-    display: flex;
-    justify-content: space-between;
+  display: block;
   }
 }
 .main-nav__menu-list {
-
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-around;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
   list-style: none;
-
-}
 @media (min-width:  @tablet-width) {
-  width: 347px;
-  margin-left: 209px;
-
 
 }
+}
+.main-nav__menu-list.menu-list__1{
+  display: none;
+  @media (min-width:  @tablet-width) {
+    display: flex;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  padding-top: 20px;
+  background-color: rgba(250, 250, 250, 1);
+  border-top: 1px solid #ECECEC;
+}
+@media (min-width:  @desktop-width) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: transparent;
+  border: none;
+}
+}
+.main-nav__menu-list-link.link__1{
+  @media (min-width:  @tablet-width) {
+    font-size: 15px;
+  }
+  @media (min-width:  @desktop-width) {
+    font-size: 17px;
+  }
+
+}
+.main-nav__menu-list.menu-list__2{
+  display: none;
+  @media (min-width:  @desktop-width) {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: rgba(250, 250, 250, 1);
+  border-top: 1px solid #ECECEC;
+  padding-top: 20px;
+  }
+}
+.main-nav__menu-list.menu-list__3{
+  display: none;
+
+  @media (min-width:  @tablet-width) {
+    display: flex;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    border: 1px solid #ECECEC;
+    padding: 39px;
+  }
+  @media (min-width:  @desktop-width) {
+    border: none;
+  }
+}
+.main-nav__menu-list-link.link__2{
+  @media (min-width:  @desktop-width) {
+  font-size: 15px;
+}
+}
+.main-nav__menu-list-item{
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+.main-nav__menu-list-item.list-item__3{
+  @media (min-width:  @desktop-width) {
+  background-color: rgba(250, 250, 250, 1);
+  padding-top: 20px;
+}
+}
+.main-nav__menu-list-link.search-link {
+
+  @media (min-width: @tablet-width) {
+    visibility: hidden;
+    width: 82px;
+  }
+}
+.main-nav_subtitle{
+  display: none;
+  @media (min-width: @tablet-width) {
+    display: block;
+  grid-column: 2/4;
+  grid-row: 2/3;
+  background-color: rgba(250, 250, 250, 1);
+  border-top: 1px solid #ECECEC;
+  margin: 0;
+  padding-top: 20px;
+  text-align: right;
+}
+@media (min-width:  @desktop-width) {
+  grid-column: 3/4;
+grid-row: 2/3;
+}
+}
+
+

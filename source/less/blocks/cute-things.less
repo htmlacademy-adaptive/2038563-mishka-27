@@ -1,7 +1,11 @@
 .cute-things{
-  background-image: url(/source/img/mobile/bgd-title-mobile.jpg);
+  background-image: url("/source/img/mobile/bgd-title-mobile.jpg");
   background-repeat: no-repeat;
-  object-fit: none;
+  background-position: 50% 0;
+  @media (min-width: @desktop-width){
+    background-position: 50% 0;
+    background-size: cover;
+  }
 }
 .cute-things__title{
   font-weight: 700;
