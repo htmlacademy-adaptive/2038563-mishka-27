@@ -26,10 +26,12 @@ border: 0;
 clip: rect(0 0 0 0);
 overflow: hidden;
 }
+//-------------картинки---------------//
 img {
   max-width: 100%;
   height: auto;
 }
+//----------------список обнуление------------//
 .list{
   margin: 0;
   padding: 0;
@@ -39,6 +41,7 @@ img {
   text-decoration: none;
   color: #000;
 }
+//-----------кнопка-------//
 .button {
   box-sizing: border-box;
   color: #444;
@@ -50,7 +53,20 @@ img {
   font-size: 18px;
   line-height: 20px;
   background-color: #fff;
+  cursor: pointer;
 }
+.button:hover  {
+  background-color: rgba(68, 68, 68, 1);
+  color:#fff;
+  opacity: 1;
+}
+.button:active {
+  font-size: 17px;
+  color: #7C7C7C;
+}
+
+
+//--------------заголовок---------------//
 .title {
   font-weight: 700;
   font-size: 27px;

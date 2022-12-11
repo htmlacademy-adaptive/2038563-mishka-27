@@ -1,9 +1,13 @@
 .comment{
+  margin-top: 50px;
   @media (min-width: @tablet-width){
+    margin-top: 83px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-
   }
+  @media (min-width: @desktop-width){
+    margin-top: 90px;
+}
 }
 .comment__title{
   margin-top: 50px;
@@ -56,4 +60,17 @@ border: 1px solid #ECECEC;
     grid-row: 1/2;
     align-self: center;
 }
+}
+.comment__pagination-arrow a{
+  margin: 0;
+}
+.slider-pagination-arrov{
+  display: block;
+  padding: 14px 18px;
+}
+.comment__pagination-arrow:hover .slider-pagination-arrov{
+opacity: 0.6;
+}
+.comment__pagination-arrow:active .slider-pagination-arrov{
+opacity: 0.3;
 }

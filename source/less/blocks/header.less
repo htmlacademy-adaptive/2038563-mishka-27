@@ -34,7 +34,15 @@
     grid-row: 1/2;
     text-align: center;
   }
+
+  &:hover{
+  opacity: 0.6;
+  }
+  &:active{
+  opacity: 0.3;
 }
+}
+
 .header__toggle{
   display: block;
   width: 20px;
@@ -103,9 +111,21 @@ box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000;
 position: relative;
 display: block;
 }
+
+//------зеленые иконки--------//
+
 .main-nav__header-icon{
   position: absolute;
- opacity: 0.2;
+  padding: 0;
+  fill:#000;
+  opacity: 0.2;
 
+  &:hover{
+    fill: @green;
+    opacity: 1;
+  }
+  &:active{
+    fill: @green;
+    opacity: 0.3;
+  }
 }
-
