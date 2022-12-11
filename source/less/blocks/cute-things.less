@@ -1,0 +1,59 @@
+.cute-things{
+  background-image: url("/source/img/mobile/bgd-title-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  @media (min-width: @desktop-width){
+    background-position: 50% 0;
+    background-size: cover;
+  }
+}
+.cute-things__title{
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  margin-top: 73px;
+  margin-bottom: 120px;
+  text-align: center;
+
+  @media (min-width: @tablet-width){
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 372px;
+  }
+  @media (min-width: @desktop-width){
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+.cute-things__list{
+
+
+  @media (min-width: @tablet-width){
+    display: flex;
+  }
+}
+.cute-things__item{
+  background-color: @green;
+  padding-top: 24px;
+  padding-bottom: 31px;
+  padding-left: 30px ;
+
+  @media (min-width: @tablet-width){
+    display: flex;
+    flex-grow: 1;
+    padding-left: 36px;
+    padding-bottom: 34px;
+  }
+}
+.cute-things__item:nth-child(even){
+  background-color: @deepgreen;
+}
+.cute-things__link{
+  display: block;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  width: 130px;
+  color: #fff;
+  text-decoration: none;
+}
