@@ -1,7 +1,14 @@
 .contacts{
+  margin-top: 38px;
+
   @media (min-width:@desktop-width){
+    margin-top: 67px;
+  }
+  @media (min-width:@desktop-width){
+    margin-top: 71px;
     display: grid;
     grid-column: 1fr 1fr;
+    column-gap: 30px;
   }
 }
 
@@ -18,15 +25,14 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 10px 5px;
-  @media (min-width:@tablet-width){
+  @media (min-width:@desktop-width){
 
   }
 }
 .contacts__card-contacts{
   @media (min-width:@tablet-width){
    display: flex;
-   justify-content: space-around;
-   margin-left: 20px;
+
   }
   @media (min-width:@desktop-width){
     max-width: 320px;
@@ -34,11 +40,46 @@
     margin-left: 200px;
   }
 }
+.contacts-adress{
+
+  @media (min-width:@tablet-width){
+  margin-left: 25px;
+}
+@media (min-width:@desktop-width){
+  margin-left: 0;
+}
+}
+.item-mail{
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid @green;
+  padding-bottom: 3px;
+}
+.item-mail:hover{
+  color: @green;
+}
+.item-mail:active {
+  border: none;
+}
+
+
 .contacts__map{
+  margin-right: 0;
+  @media (min-width:@tablet-width){
+    width: 100%;
+  }
+
   @media (min-width:@desktop-width){
+    width: 527px;
+    height: 457px;
     grid-column: 2/3;
     grid-row: 1/4;
+
   }
+}
+.contacts__map iframe{
+  display: block;
+  border: none;
 }
 .card-contacts-link{
   display: block;

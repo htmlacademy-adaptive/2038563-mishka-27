@@ -1,5 +1,5 @@
 .cute-things{
-  background-image: url("/source/img/mobile/bgd-title-mobile.jpg");
+  background-image: url('/source/img/mobile/bgd-title-mobile.jpg');
   background-repeat: no-repeat;
   background-position: 50% 0;
   @media (min-width: @desktop-width){
@@ -33,10 +33,13 @@
   }
 }
 .cute-things__item{
+
   background-color: @green;
   padding-top: 24px;
   padding-bottom: 31px;
-  padding-left: 30px ;
+  padding-left: 30px;
+  cursor: pointer;
+
 
   @media (min-width: @tablet-width){
     display: flex;
@@ -44,11 +47,19 @@
     padding-left: 36px;
     padding-bottom: 34px;
   }
+
 }
+.cute-things__item:hover{
+  margin-top: -5px;
+  padding-bottom: 37px;
+  padding-top: 19px;
+}
+
 .cute-things__item:nth-child(even){
   background-color: @deepgreen;
 }
 .cute-things__link{
+  position: relative;
   display: block;
   font-weight: 700;
   font-size: 19px;
@@ -56,4 +67,31 @@
   width: 130px;
   color: #fff;
   text-decoration: none;
+}
+.link-interior::after{
+  position: absolute;
+  display: block;
+  content: url('/source/img/mobile/lamp-svg.svg');
+  width: 40px;
+  height: 62px;
+  left: 50px;
+  opacity: 0.5;
+}
+.link-toys::after{
+  position: absolute;
+  display: block;
+  content: url('/source/img/mobile/lego-svg.svg');
+  width: 60px;
+  height: 60px;
+  left: 50px;
+  opacity: 0.5;
+}
+
+.cute-things__link:active+.link-toys::after,
+.cute-things__link:active+.link-interior::after {
+  opacity: 0.3;
+}
+.cute-things__link:hover + .link-toys::after,
+.cute-things__link:hover + .link-interior::after {
+  opacity: 0.7;
 }
