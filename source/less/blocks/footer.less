@@ -1,29 +1,79 @@
 .footer{
+  position: relative;
   background-color: #F1F1F1;
   padding: 27px 39px;
+  margin-top: 39px;
   @media (min-width:@tablet-width){
     display: flex;
     justify-content: space-between;
+    margin-top: 57px;
+    max-height: 143px;
+    padding: 51px 0 58px 0;
   }
+  @media (min-width:@desktop-width){
+    margin-top: 105px;
+}
+}
+.footer::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #E5E5E5;
+  top: 50%;
+  @media (min-width:@tablet-width){
+    display: none;
+}
 }
 .footer__social-links{
+
   display: flex;
   justify-content: space-between;
   width: 142px;
   margin: 27px auto 60px;
   list-style-type: none;
+  @media (min-width:@tablet-width){
+    margin: 0;
+  }
 }
-.social-links__social-link__link{
+
+
+.social-links__social-link{
   text-decoration: none;
 }
 .footer__logo{
   display: none;
+  cursor: pointer;
   @media (min-width:@tablet-width){
     display: block;
   }
 }
-.footer__academy{
+.footer__academy-link{
+  display: block;
+  
+}
+
+//--------------зеленые svgшки----------------..
+.logo__img,
+.footer__academy-link{
+ fill: #000000;
+  }
+
+&:hover {
+  fill: #46C1AE;
+}
+
+&:active {
+  fill:#63D1BB;
+  opacity: 0.3;
+}
+
+.footer__academy {
+
   margin: 0 auto;
+  @media (min-width:@tablet-width){
+    margin: 0;
+  }
 }
 .footer__academy-link{
   display: block;
@@ -33,5 +83,15 @@
 
 }
 .footer__academy-logo{
+  fill:#63D1BB;
   margin-left: 10px;
+}
+
+&:hover {
+  fill: #46C1AE;
+}
+
+&:active {
+  fill:#63D1BB;
+  opacity: 0.3;
 }

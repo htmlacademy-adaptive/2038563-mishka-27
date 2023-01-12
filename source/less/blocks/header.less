@@ -1,70 +1,45 @@
 .header {
-  position: relative;
+position: relative;
   width: auto;
+  height: 79px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px 0 20px;
+  padding: 22px 0;
   background-color: #fff;
+  border-bottom: 1px solid #ECECEC;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 2fr auto 2fr;
     grid-template-rows: 88px 60px;
     border: none;
-  }
-  }
-
-.header__logo {
-  width: 86px;
-  height: 35px;
-  margin-left: 86px;
-  margin-top: 22px;
-
-  @media (min-width: @tablet-width) {
-    width: 113px;
-    height: 46px;
-    margin-left: 0;
-    grid-column: 1/2;
-    grid-row: 1/2;
+    padding: 0 50px;
   }
   @media (min-width: @desktop-width) {
-    height: 72px;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    text-align: center;
-  }
-
-  &:hover{
-  opacity: 0.6;
-  }
-  &:active{
-  opacity: 0.3;
-}
-}
-
-.header__toggle{
-  display: block;
-  width: 20px;
-  height: 14px;
-
-  @media (min-width: @tablet-width) {
-  display: none;
+  
   }
 }
+
+
+
 //---------кнопка-бургер------------//
-.header__toggle{
+.header__toggle {
   position: absolute;
   top: 30px;
   right: 0;
-  z-index: 2;
   display: block;
   width: 20px;
   height: 14px;
   background-color: transparent;
   cursor: pointer;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
+
 .header__nav--closed .header__toggle::before{
 content: "";
 position: absolute;
@@ -75,11 +50,13 @@ height: 2px;
 background-color: black;
 box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000;
 }
-.header__nav--closed .header__toggle:active::before{
+
+.header__nav--closed .header__toggle:active::before {
   background-color: fade(#000, 30%);
-  box-shadow: 0 6px 0 0 fade(#000,30%), 0 12px 0 0 fade(#000,30%);
+  box-shadow: 0 6px 0 0 fade(#000000, 30%),  0 12px 0 0 fade(#000000, 30%);
 }
-.header__nav--opened .header__toggle{
+
+.header__nav--opened .header__toggle {
   top: 30px;
   right: 1px;
 
@@ -100,32 +77,41 @@ box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000;
       transform: rotate(-45deg);
     }
 &:active::before,
-&:active::after{
+&:active::after {
   background-color: fade(#000, 30%);
 }
 }
-//------------окно навигации бургера----//
 
-.menu-list__3~.search-link,
-.menu-list__3~.busket-link{
-position: relative;
-display: block;
-}
 
 //------зеленые иконки--------//
 
-.main-nav__header-icon{
+.main-nav__header-icon {
   position: absolute;
   padding: 0;
   fill:#000;
   opacity: 0.2;
 
-  &:hover{
+  &:hover {
     fill: @green;
     opacity: 1;
   }
-  &:active{
+
+  &:active {
     fill: @green;
     opacity: 0.3;
   }
+}
+
+//---------------привязываем серые вертикальные бардюры------------//
+
+.menu-list__3 {
+  position: relative;
+}
+.main-nav__menu-list-item+.main-nav__menu-list-item::before{
+  position: absolute;
+  content: "";
+  display: block;
+  width: 2px;
+  height: auto;
+  border-left: 1px solid #000000;
 }

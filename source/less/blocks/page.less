@@ -5,9 +5,18 @@
   line-height: 24px;
 }
 
-.page__body{
+.page__body {
   min-height: 100%;
   margin: 0;
-  background-color: #fff;
+  background-color: #ffffff;
   color: #000000;
+  min-width: 320px;
+}
+
+.page__container {
+  padding: 0 30px;
+  @media (min-width:  @tablet-width) {
+   padding: 0 50px;
+   margin: 0 auto;
+  }
 }
