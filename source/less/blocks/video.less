@@ -1,0 +1,54 @@
+.video {
+    margin-top: 30px;
+    margin-bottom: 58px;
+    padding: 0;
+     @media (min-width: @tablet-width){
+        margin-top: 53px;
+        margin-bottom: 64px;
+     }
+        @media (min-width: @desktop-width){
+        margin-top: 57px;
+        margin-bottom: 105px;
+        }
+}
+.video__info-title {
+    position: relative;
+    width: 130px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    margin-left: 40px;
+    @media (min-width: @tablet-width){
+        font-size: 20px;
+    }
+}
+
+
+.video__vid{
+    height: 150px;
+    width: 260px;
+    background-image: url("../img/mobile/catalog/video-mobile.jpg");
+    background-repeat: no-repeat;
+    @media (min-width: @tablet-width){
+        width: 668px;
+        background-image: url("../img/desktop/catalog/video-desktop.jpg");
+    }
+    @media (min-width: @desktop-width){
+        width: 100%;
+        height: 455px;
+    }
+}
+
+.video__info-text{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.video__info-title::before {
+    position: absolute;
+    display: block;
+    content: url(../../img/mobile/catalog/video-cam.svg);
+    right: 0;
+    top: 0;
+}

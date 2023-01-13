@@ -1,19 +1,26 @@
-.page__body{
+.page{
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body{
   margin: 0;
-  padding: 0 15px;
 }
 
-.page__container{
-  min-width: 320px;
-  padding: 0 30px;
+.page__container {
+  
   @media (min-width:@tablet-width) {
-    padding: 640px;
+
     padding: 0 50px;
   }
-  @media (min-width:1068px){
-    width: 960px;
-    padding: 0 50px;
+  @media (min-width:@desktop-width) {
+
+    padding: 0 70px;
   }
+
 }
 
 .visually-hidden {
@@ -43,6 +50,7 @@ img {
 }
 //-----------кнопка-------//
 .button {
+  width: 260px;
   box-sizing: border-box;
   color: #444;
   border: 2px solid #444;
