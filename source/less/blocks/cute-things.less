@@ -1,10 +1,11 @@
 .cute-things{
-  padding-top: 73px;
+  padding-top: 63px;
   background-color: #FAFAFA;
   background-image: url("../img/mobile/bgd-title-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: 50%;
+  border-top: 1px solid #ECECEC;
 
     @media (min-resolution: 2dppx) {
     background-image: url("../img/mobile/cute-things@2x.jpg");
@@ -28,30 +29,29 @@
 
   }
 
-    &::after {
+  .cute-things__list::after {
       @media (min-width: @tablet-width){
       position: absolute;
       content: url("");
       background-image: url("../img/my-zig-zag.svg");
       background-repeat: repeat-x;
       background-size: 42px 24px;
-      bottom: 105px;
       left: 0;
       right: 0;
+      bottom: 130px;
 
       }
       @media (min-width: @desktop-width){
         background-size: 63px 36px;
-        bottom: 82px;
+        bottom: 115px;
       }
     }
   }
 
 
-
 .cute-things__title {
-  width: 340px;
-
+  width: 242px;
+  margin: 0 auto;
   padding-bottom: 60px;
   font-weight: 700;
   font-size: 27px;
@@ -70,7 +70,7 @@
   }
 }
 .cute-things__list {
-
+  flex-grow: 1;
   margin-top: 120px;
   @media (min-width: @tablet-width){
     display: flex;
@@ -82,7 +82,6 @@
   padding-bottom: 31px;
   padding-left: 30px;
   cursor: pointer;
-
 
   @media (min-width: @tablet-width){
     display: flex;

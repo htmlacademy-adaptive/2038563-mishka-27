@@ -1,0 +1,62 @@
+.header__logo {
+    width: 86px;
+    height: 35px;
+    margin-left: 86px;
+
+
+    @media (min-width: @tablet-width) {
+      width: 113px;
+      height: 46px;
+      margin-left: 0;
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    @media (min-width: @desktop-width) {
+    width: 149px;
+      height: 72px;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      text-align: center;
+    }
+
+    &:hover{
+    opacity: 0.6;
+    }
+    &:active{
+    opacity: 0.3;
+  }
+}
+.logo-bdg{
+    @media (min-width: @tablet-width) {
+        width: 113px;
+        height: 46px;
+        background-image: url(../img/logo/logo-tablet.svg);
+        background-position: center;
+    }
+    @media (min-width: @desktop-width) {
+        width: 149px;
+        height: 72px;
+        background-image: url(../img/logo/logo-desktop.svg);
+
+    }
+}
+.main-logo {
+    fill: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg width='79' height='4' viewBox='0 0 79 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78.6473 2.31856C77.0473 1.71856 75.3473 1.71856 73.7473 1.51856C72.1473 1.31856 70.5473 1.11856 68.8473 0.918556C67.2473 1.01856 65.5473 0.918559 63.8473 1.01856L58.9473 1.31856C52.4473 1.61856 45.9473 1.61856 39.4473 1.41856C32.9473 1.31856 26.4473 0.918556 19.8473 0.918556C16.5473 0.918556 13.2473 1.01856 9.94733 1.21856C8.34733 1.51856 6.74733 1.71856 5.04733 2.11856C3.44733 2.51856 1.94733 3.01856 0.24733 3.11856C1.84733 3.51856 3.54733 3.41856 5.24733 3.41856C6.84733 3.41856 8.44733 3.51856 10.1473 3.61856C13.3473 3.41856 16.6473 3.41856 19.8473 3.31856C26.3473 3.31856 32.8473 3.61856 39.4473 3.81856C45.9473 3.91856 52.5473 4.01856 59.1473 3.71856L64.0473 3.41856C65.6473 3.31856 67.2473 3.31856 68.8473 3.31856C70.4473 3.21856 72.1473 3.01856 73.7473 2.81856C75.4473 2.61856 76.9473 2.21856 78.6473 2.31856H78.7473V2.21856C78.7473 2.01856 78.7473 1.91856 78.7473 1.71856C78.7473 2.11856 78.7473 2.21856 78.6473 2.31856Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    @media (min-width: @tablet-width) {
+     fill: #FFFFFF;
+     background-image: none;
+     margin-left: 7px;
+     width: 98px;
+     height: 48px;
+
+    }
+    @media (min-width: @desktop-width) {
+        width: 103px;
+        height: 41px;
+        background-image: url(../img/logo/logo-desktop.svg);
+        margin-top: 20px;
+    }
+}

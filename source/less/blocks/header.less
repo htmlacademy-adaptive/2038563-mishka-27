@@ -10,6 +10,7 @@ position: relative;
   border-bottom: 1px solid #ECECEC;
 
   @media (min-width: @tablet-width) {
+    height: 89px;
     display: grid;
     grid-template-columns: 2fr auto 2fr;
     grid-template-rows: 88px 60px;
@@ -17,7 +18,7 @@ position: relative;
     padding: 0 50px;
   }
   @media (min-width: @desktop-width) {
-  
+
   }
 }
 
@@ -65,7 +66,6 @@ box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000;
   content:"";
   position: absolute;
   width: 21px;
-  height: 20px;
   height: 2px;
   background-color: #000;
 }
@@ -82,36 +82,3 @@ box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000;
 }
 }
 
-
-//------зеленые иконки--------//
-
-.main-nav__header-icon {
-  position: absolute;
-  padding: 0;
-  fill:#000;
-  opacity: 0.2;
-
-  &:hover {
-    fill: @green;
-    opacity: 1;
-  }
-
-  &:active {
-    fill: @green;
-    opacity: 0.3;
-  }
-}
-
-//---------------привязываем серые вертикальные бардюры------------//
-
-.menu-list__3 {
-  position: relative;
-}
-.main-nav__menu-list-item+.main-nav__menu-list-item::before{
-  position: absolute;
-  content: "";
-  display: block;
-  width: 2px;
-  height: auto;
-  border-left: 1px solid #000000;
-}
