@@ -1,40 +1,118 @@
 .form__main-title{
-  box-sizing: border-box;
-  background-color: @lightgrey;
-}
+    position: relative;
+    width: 100%;
+    height: 177px;
+    background-color: @lightgrey;
+    padding-top: 20px;
+    z-index: -1;
+    @media (min-width: @tablet-width){
+      height: 238px;
+    }
+    @media (min-width: @desktop-width){
+      height: 272px;
+    }
+    &::after {
+      @media (min-width: @tablet-width){
+      position: absolute;
+      content: url("");
+      background-image: url("../img/my-zig-zag.svg");
+      background-repeat: repeat-x;
+      background-size: 42px 24px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      }
+      @media (min-width: @desktop-width){
+        background-size: 63px 36px;
+      }
+    }
+  }
 .form__title{
-  margin-top: 73px;
-  margin-bottom: 73px;
-  margin-left: 30px;
+
+  margin: 58px auto 74px;
+  text-align: center;
+  @media (min-width: @tablet-width){
+    margin-top: 95px;
+  }
+
 }
+
 .form__text{
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
   margin-top: 17px;
   margin-bottom: 29px;
+  padding-left: 30px;
+  padding-right: 30px;
+  @media (min-width: @tablet-width){
+    padding-top: 54px;
+    padding-bottom: 63px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media (min-width: @desktop-width){
+    width: 702px;
+    margin: 0 auto;
+    padding-top: 98px;
+    padding-bottom: 63px;
+
+  }
+
 }
 .form__filter-group{
+  position: relative;
+  width: 100%;
   margin: 0;
+  padding-bottom: 20px;
+  padding-left: 30px;
   border: none;
+  @media (min-width: @tablet-width){
+    padding-left: 167px;
+  }
   @media (min-width: @desktop-width){
-   margin-left: 50px;
+   padding-left:  173px;
+   padding-right: 173px;
   }
 }
 .form__filter-title{
+  position: relative;
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
   color: #63D1BB;
   text-transform: uppercase;
+  @media (min-width:@tablet-width){
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      @media (min-width: @desktop-width){
+        left: 70px;
+      }
+
+  }
+
+  &::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #63D1BB;
+  top: 6px;
+  right: -60px;
+   @media (min-width:@tablet-width){
+    display: none;
+  }
+  }
 }
 .filter-group__type-list{
   display: flex;
   flex-direction: column;
   text-align: left;
   flex-wrap: wrap;
-  margin-left: 60px;
-  padding: 20px;
+  margin-left: 48px;
+  padding: 35px 20px 20px;
 
   @media (min-width: @tablet-width){
     padding-left: 50px;
@@ -45,21 +123,21 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
-  margin-top: 15px;
-  padding-top: 24px;
-}
-.filter-group__type-list.filter-group__color{
-
+  padding-top: 10px;
+  padding-bottom: 20px;
   @media (min-width: @tablet-width){
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-height: 304px;
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
-  @media (min-width: @desktop-width){
-    max-height: 228px;
+}
+.filter-group__type-item.color {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media (min-width: @tablet-width){
+    padding-top: 30px;
+
   }
-  }
+}
 
 
 .control-label{
@@ -78,42 +156,51 @@
 
 
 .control-input,
-.form__filter-textarea{
+.form__filter-textarea {
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
   padding: 17px;
   border: none;
   color: @lightgrey;
+  background-color: transparent;
   border-bottom: 2px solid #444444;
+  width: 100%;
+
+  @media (min-width: @tablet-width){
+
+
+  }
 }
 //----------------радио-кнопки-----------------//
 .control-input[type="radio"] + .control-mark {
   position: absolute;
   border-radius: 50%;
   left: -65px;
-  top: 7px;
   width: 42px;
   height: 42px;
-  border: 2px solid #444;
+  border: 2px solid #444444;
   cursor: pointer;
+  top: -2px;
   @media (min-width: @tablet-width){
     width: 52px;
     height: 52px;
   }
 }
-.control-input[type="radio"]:checked+.control-mark::before {
+.control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
   background-color: @green;
   border-radius: 50%;
   content: "";
-  top: 12px;
-  left: 12px;
+  top: 10px;
+  left: 10px;
   width: 18px;
   height: 18px;
   @media (min-width: @tablet-width){
     width: 22px;
     height: 22px;
+    top: 13px;
+    left: 13px;
   }
 }
 .control-input[type="radio"]:hover + .control-mark {
@@ -122,23 +209,42 @@
 .control-input[type="radio"]:active + .control-mark {
   border: 2px solid @lightgrey;
 }
-
-
+.control-mark:hover{
+  border: 2px solid @green;
+}
+.control-mark:active{
+  border: 2px solid @lightgrey;
+}
 
 //--------------квадратные кнопки----------------//
+.group-color{
 
-.control {
-
-
+  @media (min-width: @tablet-width){
+    background-color: #F1F1F1;
 }
+}
+.filter-group__color {
+  margin-top: 30px;
+  @media (min-width: @tablet-width){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-height: 304px;
+
+  }
+  @media (min-width: @desktop-width){
+    max-height: 228px;
+  }
+  }
 .control-input[type="checkbox"] + .control-mark {
   position: absolute;
   left: -65px;
   top: 7px;
-  cursor: pointer;
   width: 38px;
   height: 38px;
-  border: 2px solid #444;
+  border: 2px solid #444444;
+  cursor: pointer;
+
   @media (min-width: @tablet-width){
     width: 52px;
     height: 52px;
@@ -150,12 +256,12 @@
   background-repeat: no-repeat;
   background-position: center;
   @media (min-width: @tablet-width){
-    background-image: url("../../img/desktop/form/Tick-desktop.svg");
+    background-image: url("../img/desktop/form/Tick-desktop.svg");
 
 }
 }
 .form__filter-textarea {
-  border: 1px solid #000;
+  border: 2px solid #444444;
   margin-top: 22px;
   min-height: 142px;
   padding: 17px;
@@ -171,20 +277,115 @@
   line-height: 16px;
 }
 
-.filter-group__type-item.color {
+.filter-group__type-item.group-color {
   margin-top: 0;
   padding: 17px;
   padding-left: 0;
   @media (min-width: @tablet-width){
-    padding-top: 50px;
+    padding-top: 30px;
   }
 }
+.control-input[type="checkbox"]:checked:hover + .control-mark {
+  border: 2px solid @green;
+}
+.control-input[type="checkbox"]:hover + .control-mark {
+  border: 2px solid @green;
+}
+.control-input[type="checkbox"]:checked:active + .control-mark {
+  border: 2px solid @lightgrey;
+}
+.control-input[type="checkbox"]:active + .control-mark {
+  border: 2px solid @lightgrey;
+}
+/*------------тел и маил----------*/
+.group-tel,
+.group-mail{
+  @media (min-width: @tablet-width){
+  background-color: #F1F1F1;
+  }
+}
+.form__inner{
+  flex-direction: column;
+  @media (min-width: @tablet-width){
+  background-color: #F1F1F1;
+  }
+}
+.group-tel::after{
+  position: absolute;
+  content: url("../img/mobile/form/form-phone.svg");
+  display: block;
+  right: 13px;
+  top: 27px;
+  @media (min-width: @tablet-width){
+    right: 30px;
+  }
+  @media (min-width: @desktop-width){
+    right: 180px;
+  }
+}
+.group-mail::after{
+  position: absolute;
+  content: url("../../img/mobile/form/form-mail.svg");
+  display: block;
+  right: 6px;
+  top: 35px;
+  @media (min-width: @tablet-width){
+    right: 30px;
+  }
+  @media (min-width: @desktop-width){
+    right: 180px;
+  }
+}
+/*----------------фио---------------*/
+.group-name{
+  @media (min-width: @tablet-width){
+  padding-left: 200px;
+  }
+}
+
+.filter-group__type-item.name{
+  @media (min-width: @tablet-width){
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+  }
+}
+/*----------комментарий-----------------*/
+
+.form__container{
+  padding-left: 30px;
+  padding-right: 30px;
+  @media (min-width: @tablet-width){
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 167px;
+  }
+    @media (min-width: @desktop-width){
+    padding-right: 167px;
+  }
+}
+.form__filter-subtitle{
+  display: inline-block;
+  font-size: 17px;
+  line-height: 30px;
+  color: #444444;
+  @media (min-width: @tablet-width){
+    margin-right: 0;
+    margin-top: 49px;
+    align-items: baseline;
+}
+}
 .form__filter-button {
+  width: 100%;
 margin-top: 30px;
-margin-bottom: 55px;
-padding: 17px 30px ;
+padding: 17px 18px;
+
 @media (min-width: @tablet-width){
   width: 230px;
   align-self: center;
+  margin-top: 49px;
 }
 }
+

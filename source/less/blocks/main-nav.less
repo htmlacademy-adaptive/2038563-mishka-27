@@ -19,9 +19,11 @@
   @media (min-width:  @tablet-width) {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 33px;
   grid-column: 1/2;
   grid-row: 2/3;
-  padding-top: 20px;
+  padding-top: 10px;
 
 }
 @media (min-width:  @desktop-width) {
@@ -57,9 +59,10 @@
   @media (min-width:  @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     grid-column: 2/4;
     grid-row: 1/2;
+    padding-bottom: 20px;
   }
   @media (min-width:  @desktop-width) {
     grid-column: 3/4;
@@ -103,9 +106,8 @@
     display: block;
   grid-column: 2/4;
   grid-row: 2/3;
-
   margin: 0;
-  padding-top: 20px;
+  padding-top: 8px;
   text-align: right;
 }
 @media (min-width:  @desktop-width) {
@@ -121,8 +123,6 @@ grid-row: 2/3;
     margin-right: 30px;
   }
 }
-
-
 
 .main-nav__menu-list-item a[href]{
   @media (min-width: @tablet-width){
@@ -155,19 +155,17 @@ grid-row: 2/3;
 
 .menu-list__3.main-nav__menu-list-item::before{
   @media (min-width: @tablet-width){
-    content: "";
+
     position: absolute;
     content: "";
-    height: 88px;
+    height: 100%;
     width: 1px;
-    background-color: #000;
-    top:0;
+    background-color: #000000;
+    top: 0;
     left: 0;
-
+    bottom: 0;
  }
 }
-
-
 
 
 /*------------окно навигации бургера---

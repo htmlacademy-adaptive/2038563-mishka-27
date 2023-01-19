@@ -39,8 +39,9 @@
 
 
 .contacts__title{
-  margin-top: 38px;
+  margin-top: 43px;
   margin-left: 30px;
+  margin-bottom: 16px;
   @media (min-width:@tablet-width){
     margin-top: 153px;
   }
@@ -52,10 +53,13 @@
 
 .card-contacts{
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 10px 5px;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 0;
   padding: 0 30px;
   max-width: 320px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
   @media (min-width:@desktop-width){
 
   }
@@ -85,6 +89,7 @@
   color: inherit;
   border-bottom: 1px solid @green;
   padding-bottom: 3px;
+  cursor: pointer;
 }
 .item-mail:hover{
   color: @green;
@@ -113,9 +118,8 @@
 }
 .card-contacts-link{
   display: block;
-  max-width: 230px;
-  margin: 42px auto 25px;
-  padding: 16px 37px;
+  margin: 30px auto 25px;
+  padding: 15px 52px;
   align-self: center;
   @media (min-width:@tablet-width){
     margin-left: 219px;
