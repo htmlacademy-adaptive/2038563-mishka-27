@@ -38,12 +38,13 @@
       background-size: 42px 24px;
       left: 0;
       right: 0;
-      bottom: 71px;
-
+      bottom: 70px;
       }
       @media (min-width: @desktop-width){
         background-size: 63px 36px;
-        bottom: 173px;
+        left: 35px;
+        
+
       }
     }
   }
@@ -65,8 +66,10 @@
     margin-bottom:371px;
   }
   @media (min-width: @desktop-width){
+    font-weight: 700;
     font-size: 53px;
     line-height: 57px;
+    margin-bottom:350px;
   }
 }
 .cute-things__list {
@@ -74,6 +77,10 @@
   margin-top: 120px;
   @media (min-width: @tablet-width){
     display: flex;
+  }
+  @media (min-width: @desktop-width){
+    max-width: 1050px;
+    margin: 0 auto;
   }
 }
 .cute-things__item {
@@ -89,7 +96,10 @@
     padding-left: 36px;
     padding-bottom: 39px;
   }
-
+  @media (min-width: @desktop-width){
+    padding-bottom: 37px;
+    padding-left: 46px;
+  }
 }
 
 
@@ -116,6 +126,7 @@
 .link-interior::after {
   position: absolute;
   content: url("../img/mobile/lamp-svg.svg");
+  display: block;
   width: 40px;
   height: 62px;
   left: 187px;
@@ -131,6 +142,7 @@
 .link-toys::after {
   position: absolute;
   content: url("../img/mobile/lego-svg.svg");
+  display: block;
   width: 60px;
   height: 60px;
   right: -100px;

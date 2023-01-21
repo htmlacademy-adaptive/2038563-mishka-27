@@ -7,9 +7,14 @@
   background-size: 50%;
     @media (min-resolution: 2dppx) {
       background-image: url("../img/tablet/commment/review@2x.jpg");
+      background-size: 46%;
+      padding-bottom: 33px;
     }
     @media (min-width: @desktop-width){
+      margin-left: 78px;
+      margin-right: 50px;
       background-size: 350px 457px;
+      padding-bottom: 90px;
     }
   }
 }
@@ -24,12 +29,13 @@
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 193px;
+    column-gap: 66px;
   }
   @media (min-width: @desktop-width){
     margin-top: 90px;
     margin-left: 174px;
-    column-gap: 450px;
+    margin-right: 27px;
+    column-gap: 280px;
 }
 }
 
@@ -41,6 +47,8 @@
     margin-top: 82px;
     grid-column: 1/2;
   }
+  
+
 }
 
 .comment__text{
@@ -50,6 +58,7 @@
   line-height: 30px;
   color: #444;
   @media (min-width: @tablet-width){
+    margin-top: 15px;
   grid-column: 1/3;
   grid-row: 2/3;
   font-size: 17px;
@@ -63,8 +72,14 @@
   margin-top: 33px;
   margin-bottom: 0;
   @media (min-width: @tablet-width){
+
+   font-size: 18px;
   grid-column: 1/2;
   grid-row: 3/4;
+  margin-top: 45px;
+  }
+  @media (min-width: @desktop-width){
+    margin-top: 25px;
   }
 }
 .comment__info-respondent-mail{
@@ -81,6 +96,10 @@
   @media (min-width: @tablet-width){
     grid-row: 3/4;
     grid-column: 2/3;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 140px;
+
 
 
   }
@@ -89,8 +108,10 @@
 display: block;
 width: 130px;
 height: 52px;
-
 border: 1px solid #ECECEC;
+@media (min-width: @tablet-width){
+
+}
 }
 
 .comment__button{
@@ -98,11 +119,14 @@ border: 1px solid #ECECEC;
   margin-bottom: 45px;
   align-items: center;
   @media (min-width: @tablet-width){
+
     width: 177px;
-    margin-top: 75px;
-    margin-bottom: 29px;
+    margin-top: 77px;
+    margin-bottom: 27px;
     padding: 15px 30px;
-    align-self: end;
+    margin-left: 165px;
+
+
   }
 
 

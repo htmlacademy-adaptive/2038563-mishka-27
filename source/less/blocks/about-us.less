@@ -1,3 +1,4 @@
+
 .about-us {
   position: relative;
 
@@ -21,12 +22,15 @@
 
     }
     @media (min-width: @desktop-width){
+      max-width: 1050px;
+      margin-left: 76px;
       background-size: 53px 23px;
     }
   }
 }
 
 .about-us__title{
+  position: relative;
   margin-top: 43px;
   margin-left: 30px;
   @media (min-width:@tablet-width){
@@ -34,20 +38,42 @@
     margin-left: 0;
   }
   @media (min-width:@desktop-width){
-    margin-top: 80px;
+    margin-top: 156px;
+    margin-bottom: 28px;
+    margin-left: 182px;
+  }
+  &::before{
+    @media (min-width: @tablet-width){
+      position: absolute;
+      content: "";
+      background-image: url("../../img/desktop/catalog/video-cam.svg");
+      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+      width: 100%;
   }
 }
+}
 .about-us__list{
-  max-height: 450px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: column;
   margin-top: 0;
-
+  padding-left: 30px;
+  padding-right: 30px;
+  @media (min-width:@tablet-width){
+    max-height: 450px;
+    padding: 0;
+  }
   @media (min-width:@desktop-width){
+
     max-width: @tablet-width;
     margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 28px;
+
   }
 }
 .info-list__item{
@@ -72,37 +98,97 @@
   margin-bottom: 20px;
 }
 .img-1{
+  position: relative;
   margin-top: 1px;
   @media (min-width: @tablet-width){
+
+    margin-top: 70px;
     margin-bottom: 24px;
   }
-
+&::before{
+    position: absolute;
+    content: url("../img/desktop/about-us/flover.svg");
+    display: block;
+    width: 33px;
+    height: 38px;
+  }
 }
 .img-2{
+  position: relative;
   margin-bottom: 40px;
   @media (min-width: @tablet-width){
-    margin-bottom: 24px;
+    margin-bottom: 50px;
     margin-top: 75px;
+  }
+  &::before{
+    position: absolute;
+    content: url("../img/desktop/about-us/money.svg");
+    display: block;
+    width: 47px;
+    height: 27px;
   }
 
 }
 .img-3{
+  position: relative;
   margin-bottom: 24px;
-  @media (min-width: @tablet-width){}
+  @media (min-width: @tablet-width){
   margin-top: 59px;
+  }
+&::before{
+    position: absolute;
+    content: url("../img/desktop/about-us/heart.svg");
+    display: block;
+    width: 34px;
+    height: 27px;
+  }
+
 }
 .img-4{
-  @media (min-width: @tablet-width){}
-  margin-top: 12px;
+  position: relative;
+  @media (min-width: @tablet-width){
+  margin-top: 60px;
+  margin-bottom: 60px;
+  }
+  &::before{
+    position: absolute;
+    content: url("../img/desktop/about-us/clew.svg");
+    display: block;
+    width: 28px;
+    height: 22px;
+  }
+
 }
 .img-5{
+  position: relative;
   margin-bottom: 28px;
-  @media (min-width: @tablet-width){}
-  margin-top: 58px;
+  @media (min-width: @tablet-width){
+  margin-top: 60px;
+  margin-bottom: 10px;
+  }
+  &::before{
+    position: absolute;
+    content: url("../img/desktop/about-us/rocket.svg");
+    display: block;
+    width: 41px;
+    height: 23px;
+  }
+
 }
 .img-6{
+  position: relative;
 margin-bottom: 24px;
-@media (min-width: @tablet-width){}
-  margin-top: 59px;
+@media (min-width: @tablet-width){
+  margin-top: 95px;
+}
+&::before{
+  position: absolute;
+  content: url("../img/desktop/about-us/gift.svg");
+  display: block;
+  width: 33px;
+  height: 32px;
+  bottom: 0;
+  left: 0;
+}
 }
 
