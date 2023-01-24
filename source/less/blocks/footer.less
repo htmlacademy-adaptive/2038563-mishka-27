@@ -2,25 +2,29 @@
   position: relative;
   background-color: #F1F1F1;
   padding: 27px 39px;
-  margin-top: 39px;
+  margin-top: 40px;
   @media (min-width:@tablet-width){
     display: flex;
     justify-content: space-between;
-    margin-top: 57px;
+    margin-top: 65px;
     max-height: 143px;
-    padding: 51px 50px 58px;
+    padding: 41px 50px 50px;
+
   }
   @media (min-width:@desktop-width){
-    margin-top: 105px;
+    margin-top: 56px;
     padding-left: 70px;
     padding-right: 70px;
+    
+
 }
 }
-.footer::before {
+.social-links::before {
   position: absolute;
   content: "";
   display: block;
-  width: 100%;
+  width: 65% ;
+  left: 40;
   border-bottom: 1px solid #E5E5E5;
   top: 50%;
   @media (min-width:@tablet-width){
@@ -32,10 +36,11 @@
   display: flex;
   justify-content: space-between;
   width: 142px;
-  margin: 27px auto 60px;
+  margin: 0 auto 35px;
   list-style-type: none;
   @media (min-width:@tablet-width){
     margin: 0;
+    align-items: flex-end;
   }
 }
 
@@ -50,15 +55,16 @@
     display: block;
   }
 }
-.footer__academy-link{
-  display: block;
-  margin-left: 30px;
+.footer__academy{
+  @media (min-width:@tablet-width){
+    width: 180px;
 
+  }
 }
 
+
 //--------------зеленые svgшки----------------..
-.logo__img,
-.footer__academy-link{
+.logo__img{
  fill: #000000;
   }
 
@@ -83,11 +89,22 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
+  margin-left: 30px;
+  @media (min-width:@tablet-width){
+   margin: 0;
+   align-items: center;
+  }
+  @media (min-width:@desktop-width){
 
+  }
 }
 .footer__academy-logo{
   fill:#63D1BB;
-  margin-left: 10px;
+  margin-left: 30px;
+  padding-top: 10px;
+  @media (min-width:@tablet-width){
+    margin-left: 25px;
+  }
 }
 
 &:hover {

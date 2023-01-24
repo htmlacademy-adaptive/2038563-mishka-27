@@ -11,6 +11,7 @@
     display: grid;
     grid-column: 1fr 1fr;
     column-gap: 30px;
+
   }
   &::before {
   position: absolute;
@@ -22,59 +23,91 @@
   right: 0;
   top: -30px;
 
+
   @media (min-width: @tablet-width){
 
   background-image: url("../img/my-zig-zag-2.svg");
   background-repeat: repeat-x;
   background-size: 39px 17px;
-  top: -73px;
+  top: -94px;
 
   }
   @media (min-width: @desktop-width){
-  background-size: 53px 23px;
-  top:-20px;
+
+
+      background-size: 53px 23px;
+      top: -20px;
   }
   }
 }
 
-
 .contacts__title{
-  margin-top: 38px;
+  position: relative;
+  margin-top: 43px;
   margin-left: 30px;
+  margin-bottom: 16px;
   @media (min-width:@tablet-width){
-    margin-top: 153px;
+    margin-top: 157px;
+    margin-bottom: 28px;
+    margin-left: 0;
   }
 
   @media (min-width:@desktop-width){
-    margin-left: 200px;
+    margin-left: 107px;
   }
+  &::before {
+    @media (min-width: @tablet-width){
+    position: absolute;
+    content: url("../img/tablet/flag.svg");
+    width: 47px;
+    height: 81px;
+    right: 0;
+    top: -30px;
+  }
+    @media (min-width: @desktop-width){
+      top: 0;
+      left: -114px;
+    }
+}
 }
 
 .card-contacts{
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 10px 5px;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 0;
   padding: 0 30px;
   max-width: 320px;
-  @media (min-width:@desktop-width){
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  @media (min-width:@tablet-width){
+    font-size: 17px;
+    padding: 0;
+  }
 
+  @media (min-width:@desktop-width){
+    grid-template-columns: 1fr 3fr;
   }
 }
 .contacts__card-contacts{
   @media (min-width:@tablet-width){
    display: flex;
-
   }
   @media (min-width:@desktop-width){
     max-width: 320px;
     flex-direction: column;
-    margin-left: 200px;
+    margin-left: 105px;
   }
+}
+.card-contacts__item{
+  @media (min-width:@desktop-width){
+  margin-top: 8px;
+}
 }
 .contacts-adress{
 
   @media (min-width:@tablet-width){
-  margin-left: 25px;
+  margin-left: 52px;
 }
 @media (min-width:@desktop-width){
   margin-left: 0;
@@ -85,6 +118,7 @@
   color: inherit;
   border-bottom: 1px solid @green;
   padding-bottom: 3px;
+  cursor: pointer;
 }
 .item-mail:hover{
   color: @green;
@@ -98,6 +132,7 @@
   margin-top: 62px;
   @media (min-width:@tablet-width){
     width: 100%;
+    margin-top: 29px;
   }
 
   @media (min-width:@desktop-width){
@@ -105,24 +140,28 @@
     height: 457px;
     grid-column: 2/3;
     grid-row: 1/4;
-  }
+    margin-top: 82px;
+
 }
+  }
+
 .contacts__map iframe{
   display: block;
   width: 100%;
 }
 .card-contacts-link{
   display: block;
-  max-width: 230px;
-  margin: 42px auto 25px;
-  padding: 16px 37px;
+  margin: 30px auto 25px;
+  padding: 15px 52px;
   align-self: center;
   @media (min-width:@tablet-width){
-    margin-left: 219px;
-    max-width: 260px;
+    margin-top: 65px;
+    padding: 14px 37px;
+    max-width: 230px;
   }
 
   @media (min-width:@desktop-width){
-    margin-left: 175px;
+    margin-top: 39px;
+    margin-left: 174px;
   }
 }
