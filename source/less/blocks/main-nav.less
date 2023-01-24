@@ -66,7 +66,7 @@
     justify-content: flex-end;
     grid-column: 2/4;
     grid-row: 1/2;
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
   @media (min-width:  @desktop-width) {
     grid-column: 3/4;
@@ -171,7 +171,7 @@ grid-row: 2/3;
     width: 1px;
     background-color: #E5E5E5;
     top: 0;
-    left: 480px;
+    left: 454px;
     @media (min-width:  @desktop-width) {
       left: 264px;
     }
@@ -186,7 +186,7 @@ grid-row: 2/3;
     width: 1px;
     background-color: #E5E5E5;
     top: 0;
-    right: 392px;
+    right: 400px;
     @media (min-width:  @desktop-width) {
       right: 338px;
  }
@@ -201,7 +201,7 @@ grid-row: 2/3;
     width: 1px;
     background-color: #E5E5E5;
     top: 0;
-    right: 392px;
+    right: 400px;
     @media (min-width:  @desktop-width) {
       right: 426px;
  }
@@ -209,33 +209,31 @@ grid-row: 2/3;
 }
 
 
-/*------------окно навигации бургера---
-.menu-list__3~.search-link,
-.menu-list__3~.busket-link {
-position: relative;
-display: block;
+/*------------окно навигации бургера header__nav--opened---*/
+.header__nav--opened .header {
+  position: relative;
 }
-.header__nav--opened .burger-menu,
-.header__nav--opened .main-nav {
-  order: -1;
-  display: flex;
-  z-index: 2;
+
+.header__nav--opened ~.burger-menu {
+
   position: absolute;
-  top: 80px;
+  display: block;
+  flex-direction: column;
+  z-index: 2;
   left: 0;
-  background-color: #ffffff;
   width: 100%;
+
 }
 
-.header__nav--opened.main-nav__menu-list-item {
-  margin: 0 auto;
-  padding: 27px auto;
+.header__nav--opened~.burger-menu.menu-list__1 {
+  top: 60px;
+}
+.header__nav--opened~.burger-menu.menu-list__3 {
+  top: 120px;
+}
+.header__nav--opened~.main-nav__menu-list-item {
+  @media (min-width:@mobile-width-only){
+  padding: 28px auto 26px;
   border: 1px solid #ECECEC;
+  }
 }
-.header__nav--closed .burger-menu,
-.header__nav--closed .main-nav {
-  display: none;
-}
-*/
-
-

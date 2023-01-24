@@ -1,9 +1,9 @@
+
 .form__main-title{
-    position: relative;
+
     width: 100%;
-    height: 177px;
     background-color: @lightgrey;
-    padding-top: 20px;
+    padding: 20px 0 50px;
     z-index: -1;
     @media (min-width: @tablet-width){
       height: 238px;
@@ -11,31 +11,45 @@
     @media (min-width: @desktop-width){
       height: 272px;
     }
-    &::after {
-      @media (min-width: @tablet-width){
-      position: absolute;
-      content: url("");
-      background-image: url("../img/my-zig-zag.svg");
-      background-repeat: repeat-x;
-      background-size: 42px 24px;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      }
-      @media (min-width: @desktop-width){
-        background-size: 63px 36px;
-      }
-    }
-  }
-.form__title{
 
-  margin: 58px auto 74px;
+  }
+  .form__filter{
+    margin: 0;
+  }
+
+.form__title{
+  position: relative;
+  margin-top: 54px;
   text-align: center;
   @media (min-width: @tablet-width){
-    margin-top: 95px;
+    padding-top: 83px;
+    margin-top: 0;
   }
+  @media (min-width: @desktop-width){
+    margin: 0;
+    padding-top: 82px;
+    padding-bottom: 33px;
 
+  }
+  &::after {
+    @media (min-width: @tablet-width){
+    position: absolute;
+    content: "";
+    background-image: url("../img/my-zig-zag.svg");
+    background-repeat: repeat-x;
+    background-size: 42px 24px;
+    width: 100%;
+    height: 24px;
+    bottom: -85px;
+    left: 0;
+    right: 0;
+
+    }
+    @media (min-width: @desktop-width){
+      background-size: 63px 36px;
+
+    }
+  }
 }
 
 .form__text{
@@ -47,16 +61,15 @@
   padding-left: 30px;
   padding-right: 30px;
   @media (min-width: @tablet-width){
-    padding-top: 54px;
-    padding-bottom: 63px;
-    padding-left: 50px;
-    padding-right: 50px;
+    font-size: 17px;
+    line-height: 30px;
+    padding: 38px 50px 0;
   }
   @media (min-width: @desktop-width){
-    width: 702px;
+    width: 792px;
     margin: 0 auto;
     padding-top: 98px;
-    padding-bottom: 63px;
+    padding-bottom: 23px;
 
   }
 
@@ -65,15 +78,20 @@
   position: relative;
   width: 100%;
   margin: 0;
-  padding-bottom: 20px;
-  padding-left: 30px;
+  padding-bottom: 8px;
+  padding: 10px 30px 0px;
+
+
   border: none;
   @media (min-width: @tablet-width){
-    padding-left: 167px;
+    padding-left: 185px;
+    padding-top: 18px;
   }
   @media (min-width: @desktop-width){
    padding-left:  173px;
    padding-right: 173px;
+
+
   }
 }
 .form__filter-title{
@@ -85,47 +103,55 @@
   text-transform: uppercase;
   @media (min-width:@tablet-width){
       position: absolute;
-      top: 60px;
-      left: 30px;
+      top: 73px;
+      left: 47px;
+
       @media (min-width: @desktop-width){
         left: 70px;
       }
 
   }
-
-  &::before {
+}
+  .form__filter-group::before {
   position: absolute;
   content: "";
   display: block;
-  width: 100%;
+  width: 56%;
   border-bottom: 1px solid #63D1BB;
-  top: 6px;
-  right: -60px;
+  top: -10px;
+  margin-left: 80px;
    @media (min-width:@tablet-width){
     display: none;
   }
   }
-}
+
 .filter-group__type-list{
   display: flex;
   flex-direction: column;
   text-align: left;
   flex-wrap: wrap;
+
   margin-left: 48px;
-  padding: 35px 20px 20px;
+  padding: 22px 15px 20px;
 
   @media (min-width: @tablet-width){
     padding-left: 50px;
+  }
+  @media (min-width: @desktop-width){
+    padding-left: 70px;
+    margin-left: 60px;
   }
 }
 .filter-group__type-item{
   position: relative;
   font-weight: 700;
   font-size: 17px;
+  font-weight: 700;
+  font-size: 19px;
   line-height: 18px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   @media (min-width: @tablet-width){
+    font-size: 19px;
     padding-top: 20px;
     padding-bottom: 30px;
   }
@@ -134,8 +160,9 @@
   padding-top: 20px;
   padding-bottom: 20px;
   @media (min-width: @tablet-width){
-    padding-top: 30px;
-
+    padding-top: 25px;
+    padding-bottom: 32px;
+    margin-right: 82px;
   }
 }
 
@@ -160,19 +187,18 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
-  padding: 17px;
+  padding: 17px 10px 12px;
   border: none;
   color: @lightgrey;
   background-color: transparent;
   border-bottom: 2px solid #444444;
   width: 100%;
 
-  @media (min-width: @tablet-width){
-
-
-  }
 }
+
 //----------------радио-кнопки-----------------//
+
+
 .control-input[type="radio"] + .control-mark {
   position: absolute;
   border-radius: 50%;
@@ -219,23 +245,41 @@
 //--------------квадратные кнопки----------------//
 .group-color{
 
+
   @media (min-width: @tablet-width){
     background-color: #F1F1F1;
-}
+    padding-left: 170px;
+  }
+  @media (min-width: @desktop-width){
+    padding-left: 225px;
+    padding-right: 30px;
+    margin-top: 0;
+    padding-top: 44px;
+    padding-bottom: 12px;
+  }
 }
 .filter-group__color {
-  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 8px;
   @media (min-width: @tablet-width){
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     max-height: 304px;
-
+    padding-top: 37px;
+    padding-left: 65px;
+    padding-right: 30px;
+    padding-bottom: 27px;
   }
   @media (min-width: @desktop-width){
     max-height: 228px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 75px;
+    padding-bottom: 18px;
+}
   }
-  }
+
 .control-input[type="checkbox"] + .control-mark {
   position: absolute;
   left: -65px;
@@ -262,9 +306,14 @@
 }
 .form__filter-textarea {
   border: 2px solid #444444;
-  margin-top: 22px;
+  font-size: 20px;
+  margin-top: 11px;
+  margin-bottom: 7px;
   min-height: 142px;
-  padding: 17px;
+  padding: 12px;
+  @media (min-width: @tablet-width){
+    margin-top: 13px;
+  }
 }
 .form__inner {
   display: flex;
@@ -275,6 +324,10 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  @media (min-width: @desktop-width){
+  margin-top: 53px;
+  margin-bottom: 0;
+}
 }
 
 .filter-group__type-item.group-color {
@@ -285,6 +338,17 @@
     padding-top: 30px;
   }
 }
+.filter-group__type-item.color {
+  padding-top: 20px;
+  padding-bottom: 23px;
+  @media (min-width: @tablet-width){
+    width: 180px;
+    padding-top: 30px;
+    padding-bottom: 28px;
+    margin-right: 83px;
+  }
+}
+
 .control-input[type="checkbox"]:checked:hover + .control-mark {
   border: 2px solid @green;
 }
@@ -297,11 +361,62 @@
 .control-input[type="checkbox"]:active + .control-mark {
   border: 2px solid @lightgrey;
 }
-/*------------тел и маил----------*/
-.group-tel,
-.group-mail{
+
+/*----------------фио---------------*/
+.group-name{
   @media (min-width: @tablet-width){
+  padding-left: 215px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  }
+  @media (min-width: @desktop-width){
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+}
+.control-input[type="text"]{
+  @media (min-width: @tablet-width){
+  width: 79%;
+  margin-left: 10px;
+  }
+}
+.filter-group__type-item.name{
+
+  @media (min-width: @tablet-width){
+
+    display: inline-flexbox;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 6px;
+  }
+}
+/*------------тел и маил----------*/
+
+.group-tel{
+ padding-top: 16px;
+ padding-bottom: 18px;
+ @media (min-width: @tablet-width){
+  padding-top: 55px;
+ padding-bottom: 0;
+ }
+}
+.group-mail{
+
+  padding-top: 3px;
+    padding-bottom: 12px;
+}
+
+.group-mail,
+.group-tel{
+  @media (min-width: @tablet-width){
+
   background-color: #F1F1F1;
+  padding-left: 215px;
+  padding-right: 50px;
+  }
+  @media (min-width: @desktop-width){
+    padding-left: 225px;
+    padding-right: 225px;
   }
 }
 .form__inner{
@@ -310,49 +425,59 @@
   background-color: #F1F1F1;
   }
 }
+.control-input[type="tel"]{
+  width: 100%;
+  padding-top: 6px;
+  padding-left: 20px;
+
+}
+.control-input[type="email"]{
+  padding-left: 20px;
+}
 .group-tel::after{
   position: absolute;
   content: url("../img/mobile/form/form-phone.svg");
   display: block;
-  right: 13px;
-  top: 27px;
+  right: 37px;
+  top: 32px;
   @media (min-width: @tablet-width){
-    right: 30px;
+    right: 75px;
+    top: 68px;
   }
   @media (min-width: @desktop-width){
-    right: 180px;
+    right: 260px;
   }
 }
 .group-mail::after{
   position: absolute;
-  content: url("../../img/mobile/form/form-mail.svg");
+  content: url("../img/mobile/form/form-mail.svg");
   display: block;
-  right: 6px;
-  top: 35px;
+  right: 33px;
+  top: 38px;
   @media (min-width: @tablet-width){
-    right: 30px;
+    right: 73px;
+    top: 27px;
   }
   @media (min-width: @desktop-width){
-    right: 180px;
-  }
-}
-/*----------------фио---------------*/
-.group-name{
-  @media (min-width: @tablet-width){
-  padding-left: 200px;
-  }
-}
-
-.filter-group__type-item.name{
-  @media (min-width: @tablet-width){
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-
+    right: 253px;
   }
 }
 /*----------комментарий-----------------*/
+.group-comment{
+  margin-top: 10px;
+  @media (min-width: @tablet-width){
+    margin-top: 40px;
+  padding-left: 215px;
+  padding-right: 50px;
+  }
+  @media (min-width: @desktop-width){
+    padding-right: 277px;
+    padding-left: 173px;
+   margin-left: 50px;
 
+
+}
+}
 .form__container{
   padding-left: 30px;
   padding-right: 30px;
@@ -360,32 +485,46 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding-left: 167px;
+    padding-left: 50px;
+    padding-right: 50px;
+
   }
     @media (min-width: @desktop-width){
-    padding-right: 167px;
+    padding-right: 225px;
+    padding-left: 225px;
   }
 }
+
 .form__filter-subtitle{
   display: inline-block;
-  font-size: 17px;
+  font-size: 14px;
   line-height: 30px;
   color: #444444;
+  margin-top: 0;
   @media (min-width: @tablet-width){
+    font-size: 16px;
     margin-right: 0;
-    margin-top: 49px;
+    margin-top: 55px;
+    margin-bottom: 0;
     align-items: baseline;
+}
+@media (min-width: @desktop-width){
+  margin-top: 35px;
 }
 }
 .form__filter-button {
   width: 100%;
-margin-top: 30px;
-padding: 17px 18px;
+margin-top: 9px;
+margin-bottom: 14px;
+padding: 15px 18px;
 
 @media (min-width: @tablet-width){
   width: 230px;
   align-self: center;
-  margin-top: 49px;
+  margin-top: 43px;
+  margin-bottom: 0;
+}
+@media (min-width: @desktop-width){
+  margin-top: 40px;
 }
 }
-

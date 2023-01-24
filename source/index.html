@@ -131,7 +131,7 @@
           <div class="container-for-picture">
           <picture>
             <source media="(min-width: 768px)" srcset="img/tablet/product/three-busket-tablet.jpg 1x, img/tablet/product/three-busket@2x.jpg 2x">
-           <img class="card-product__img" src="./img/mobile/three-busket.jpg" src="./img/mobile/three-busket-mobile1@2x.jpg" alt="картинка вязанные корзинки" >
+           <img class="card-product__img" src="./img/mobile/three-busket.jpg" srcset="./img/mobile/three-busket-mobile1@2x.jpg" alt="картинка вязанные корзинки" >
           </picture>
           </div>
           <div class="card-product__price-inner">
@@ -258,7 +258,7 @@
       </div>
         <button class="comment__button button">написать</button>
         </div>
-      </div>
+
       </section>
 
 
@@ -269,7 +269,7 @@
           <div class="card-contacts">
               <p class="card-contacts__item">e-mail:</p>
               <p class="card-contacts__item">
-                <a href="" class="item-mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+                <a href="#" class="item-mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
               </p>
               </div>
             <div class="card-contacts contacts-adress">
@@ -308,7 +308,7 @@
               <svg  class="logo__img" width="29" height="22" >
                 <use href="./img/sprite.svg#vk-link"/>
               </svg>
-              </svg>
+
             </a>
 
           </li>
@@ -340,22 +340,42 @@
 
 
     </footer>
-<!----------------модальное окно РАЗМЕРЫ------------>
+<!----------------модальное окно modal--show  ------------>
 
-<div id="openModal" class="modal">
+<div class="modal">
+<div id="openModal" class="modal__container">
   <div class="modal__content">
     <h3 class="modal__title">добавить в корзину</h3>
     <p class="modal__subtitle">Выберите размер:</p>
+    <form class="form-sizes" action="index.html" >
     <ol class="modal__list sizes list">
-      <li class="sizes__item">S</li>
-      <li class="sizes__item">M</li>
-      <li class="sizes__item">L</li>
+      <li class="sizes__item radio-size">
+        <input class="visually-hidden radio-size__input" id="size-small" type="radio" name="size"  value="Small" checked>
+        <label for="size-small" class="radio-size__label">S</label>
+      </li>
+      <li class="sizes__item radio-size">
+        <input class="visually-hidden radio-size__input" id="size-middle" type="radio" name="size"  value="madium">
+        <label for="size-middle" class="radio-size__label">M</label>
+      </li>
+
+      <li class="sizes__item radio-size">
+        <input class="visually-hidden radio-size__input" id="size-large" type="radio" name="size"  value="large">
+        <label for="size-large" class="radio-size__label">L</label>
+      </li>
+
+
 
     </ol>
     <button class="modal__button  green-button">добавить</button>
-  </div>
- </div>
+  </form>
 
+  </div>
+
+ </div>
+</div>
+
+
+<script src="./js/script.js"></script>
 </body>
 
 </html>

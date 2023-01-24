@@ -11,7 +11,7 @@
     display: grid;
     grid-column: 1fr 1fr;
     column-gap: 30px;
-    padding-right: 50px;
+
   }
   &::before {
   position: absolute;
@@ -29,7 +29,7 @@
   background-image: url("../img/my-zig-zag-2.svg");
   background-repeat: repeat-x;
   background-size: 39px 17px;
-  top: -82px;
+  top: -94px;
 
   }
   @media (min-width: @desktop-width){
@@ -47,24 +47,26 @@
   margin-left: 30px;
   margin-bottom: 16px;
   @media (min-width:@tablet-width){
-    margin-top: 163px;
+    margin-top: 157px;
     margin-bottom: 28px;
     margin-left: 0;
   }
 
   @media (min-width:@desktop-width){
-    margin-left: 180px;
+    margin-left: 107px;
   }
   &::before {
     @media (min-width: @tablet-width){
     position: absolute;
     content: url("../img/tablet/flag.svg");
-    width: 100%;
+    width: 47px;
+    height: 81px;
     right: 0;
     top: -30px;
   }
     @media (min-width: @desktop-width){
       top: 0;
+      left: -114px;
     }
 }
 }
@@ -90,13 +92,11 @@
 .contacts__card-contacts{
   @media (min-width:@tablet-width){
    display: flex;
-
-
   }
   @media (min-width:@desktop-width){
     max-width: 320px;
     flex-direction: column;
-    margin-left: 180px;
+    margin-left: 105px;
   }
 }
 .card-contacts__item{
@@ -141,9 +141,10 @@
     grid-column: 2/3;
     grid-row: 1/4;
     margin-top: 82px;
-    margin-right: 25px;
-  }
+
 }
+  }
+
 .contacts__map iframe{
   display: block;
   width: 100%;
@@ -154,13 +155,13 @@
   padding: 15px 52px;
   align-self: center;
   @media (min-width:@tablet-width){
-    margin-top: 60px;
+    margin-top: 65px;
     padding: 14px 37px;
     max-width: 230px;
   }
 
   @media (min-width:@desktop-width){
     margin-top: 39px;
-    margin-left: 253px;
+    margin-left: 174px;
   }
 }
