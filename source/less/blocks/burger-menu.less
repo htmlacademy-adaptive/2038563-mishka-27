@@ -1,0 +1,35 @@
+/*---------бургерное  меню header--opened header--closed---------------*/
+
+.burger-menu {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  top: 78px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: max-content;
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.burger__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  margin: 0 auto;
+}
+
+.burger__list-item {
+  display: flex;
+  align-items: center;
+  padding: 28px 30px 28px 76px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 #ECECEC, inset 0 1px 0 #ECECEC;
+}
+
+

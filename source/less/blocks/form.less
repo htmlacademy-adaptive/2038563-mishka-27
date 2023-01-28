@@ -107,7 +107,7 @@
       left: 47px;
 
       @media (min-width: @desktop-width){
-        left: 70px;
+        left: 110px;
       }
 
   }
@@ -139,7 +139,8 @@
   }
   @media (min-width: @desktop-width){
     padding-left: 70px;
-    margin-left: 60px;
+    padding-bottom: 36px;
+    margin-left: 46px;
   }
 }
 .filter-group__type-item{
@@ -152,9 +153,12 @@
   padding-bottom: 15px;
   @media (min-width: @tablet-width){
     font-size: 19px;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding-top: 17px;
+    padding-bottom: 40px;
+  @media (min-width: @desktop-width){
+    padding-left: 17px;
   }
+}
 }
 .filter-group__type-item.color {
   padding-top: 20px;
@@ -163,6 +167,10 @@
     padding-top: 25px;
     padding-bottom: 32px;
     margin-right: 82px;
+    padding-left: 17px;
+  }
+  @media (min-width: @desktop-width){
+
   }
 }
 
@@ -182,19 +190,17 @@
 }
 
 
-.control-input,
-.form__filter-textarea {
+.control-input {
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
   padding: 17px 10px 12px;
   border: none;
-  color: @lightgrey;
   background-color: transparent;
   border-bottom: 2px solid #444444;
   width: 100%;
-
 }
+
 
 //----------------радио-кнопки-----------------//
 
@@ -249,13 +255,12 @@
   @media (min-width: @tablet-width){
     background-color: #F1F1F1;
     padding-left: 170px;
+    padding-top: 0;
   }
   @media (min-width: @desktop-width){
-    padding-left: 225px;
-    padding-right: 30px;
+    padding: 26px 30px 14px 225px;
     margin-top: 0;
-    padding-top: 44px;
-    padding-bottom: 12px;
+
   }
 }
 .filter-group__color {
@@ -269,7 +274,7 @@
     padding-top: 37px;
     padding-left: 65px;
     padding-right: 30px;
-    padding-bottom: 27px;
+    padding-bottom: 33px;
   }
   @media (min-width: @desktop-width){
     max-height: 228px;
@@ -305,14 +310,19 @@
 }
 }
 .form__filter-textarea {
+font-weight: 400;
+font-size: 19px;
+line-height: 18px;
   border: 2px solid #444444;
-  font-size: 20px;
   margin-top: 11px;
   margin-bottom: 7px;
   min-height: 142px;
   padding: 12px;
   @media (min-width: @tablet-width){
     margin-top: 13px;
+  }
+  @media (min-width: @desktop-width){
+    margin-top: 23px;
   }
 }
 .form__inner {
@@ -363,6 +373,14 @@
 }
 
 /*----------------фио---------------*/
+.filter-group__type-item.name {
+  @media (min-width: @tablet-width){
+
+  }
+  @media (min-width: @desktop-width){
+    padding-left: 6px;
+  }
+}
 .group-name{
   @media (min-width: @tablet-width){
   padding-left: 215px;
@@ -372,15 +390,49 @@
   @media (min-width: @desktop-width){
     padding-left: 225px;
     padding-right: 225px;
+    padding-bottom: 47px;
   }
 }
-.control-input[type="text"]{
+//----------------------у input активность зеленые border--------//
+.control-input[type="text"],
+.control-input[type="tel"],
+.control-input[type="email"] {
   @media (min-width: @tablet-width){
   width: 79%;
   margin-left: 10px;
   }
+  @media (min-width: @desktop-width){
+  width: 85%;
+  margin-left: 5px;
+  }
+  &:hover {
+    border-bottom: 2px solid @green;
+  }
+  &:active{
+    border-bottom: 2px solid @green;
+  }
 }
-.filter-group__type-item.name{
+//----------------------placehplder меняет цвет-----------//
+.control-input[type="text"],
+.control-input[type="tel"],
+.control-input[type="email"] {
+  &::-webkit-input-placeholder {
+    color: #000000;
+    opacity: 0.3;
+  }
+  &::-moz-placeholder {
+    color: #000000;
+    opacity: 0.3;
+  }
+  &:active::-webkit-input-placeholder {
+      color: @darkgrey;
+  }
+  &:active::-moz-placeholder {
+      color: @darkgrey;
+  }
+}
+
+.filter-group__type-item.name {
 
   @media (min-width: @tablet-width){
 
@@ -390,6 +442,7 @@
     padding-bottom: 6px;
   }
 }
+
 /*------------тел и маил----------*/
 
 .group-tel{
@@ -399,11 +452,15 @@
   padding-top: 55px;
  padding-bottom: 0;
  }
+ @media (min-width: @desktop-width){
+ padding-top: 45px;
+}
 }
 .group-mail{
-
-  padding-top: 3px;
-    padding-bottom: 12px;
+  @media (min-width: @tablet-width){
+  padding-top: 30px;
+  padding-bottom: 48px;
+  }
 }
 
 .group-mail,
@@ -429,88 +486,137 @@
   width: 100%;
   padding-top: 23px;
   padding-left: 20px;
-
+  @media (min-width: @tablet-width){
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 .control-input[type="email"]{
+  width: 100%;
   padding-left: 20px;
 }
-.group-tel::after{
+.group-tel::after {
   position: absolute;
-  content: url("../img/mobile/form/form-phone.svg");
+  content: "";
+  background-image: url("../img/mobile/form/form-phone.svg");
   display: block;
   right: 37px;
   top: 32px;
+  width: 25px;
+  height: 24px;
   @media (min-width: @tablet-width){
     right: 75px;
     top: 68px;
   }
   @media (min-width: @desktop-width){
-    right: 260px;
+    right: 233px;
+    top: 63px;
   }
 }
-.group-mail::after{
+
+.group-mail::after {
   position: absolute;
-  content: url("../img/mobile/form/form-mail.svg");
+  content: "";
+  background-image: url("../img/mobile/form/form-mail.svg");
   display: block;
   right: 33px;
   top: 38px;
+  width: 32px;
+  height: 21px;
   @media (min-width: @tablet-width){
     right: 73px;
     top: 27px;
   }
   @media (min-width: @desktop-width){
-    right: 253px;
+    right: 230px;
+    top: 42px;
   }
 }
+
+
+//---------------------активность зеленst иконкb tel,mail------------//
+
+.control-input [type="email"]:focus + .group-mail::after
+{
+  background-image: url("../img/mobile/form/email-green.svg");
+}
+
+.control-input [type="tel"]:focus + .group-tel::after {
+  background-image: url("../img/mobile/form/phone-green.svg");
+}
+
+.control-input [type="tel"]:active + .group-tel::after,
+.control-input [type="email"]:active + .group-mail::after {
+  background-image: none;
+}
+
 /*----------комментарий-----------------*/
-.group-comment{
+.group-comment {
   margin-top: 10px;
   @media (min-width: @tablet-width){
-    margin-top: 40px;
+
   padding-left: 215px;
   padding-right: 50px;
-  }
+  margin-top: 0;
+  padding-top: 36px;
+  padding-bottom: 0;
+}
   @media (min-width: @desktop-width){
-    padding-right: 277px;
-    padding-left: 173px;
-   margin-left: 50px;
-
-
+    padding-right: 226px;
+    padding-left: 224px;
 }
 }
-.form__container{
+
+.form__container {
   padding-left: 30px;
   padding-right: 30px;
-  @media (min-width: @tablet-width){
+  @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
-
   }
-    @media (min-width: @desktop-width){
+  @media (min-width: @desktop-width) {
     padding-right: 225px;
     padding-left: 225px;
   }
 }
+.form__filter-textarea{
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 19px;
+  padding: 17px 10px 12px;
+  background-color: transparent;
+  width: 100%;
+  @media (min-width: @tablet-width) {
+    margin-top: 6px;
+  }
+  @media (min-width: @desktop-width) {
+  margin-top: 24px;
+}
+}
+.form__filter-textarea:hover,
+.form__filter-textarea:active {
+  border: 2px solid @green;
+}
 
-.form__filter-subtitle{
+.form__filter-subtitle {
   display: inline-block;
   font-size: 14px;
   line-height: 30px;
   color: #444444;
   margin-top: 0;
-  @media (min-width: @tablet-width){
+  @media (min-width: @tablet-width) {
     font-size: 16px;
     margin-right: 0;
     margin-top: 55px;
     margin-bottom: 0;
     align-items: baseline;
-}
-@media (min-width: @desktop-width){
-  margin-top: 35px;
-}
+  }
+  @media (min-width: @desktop-width) {
+  margin-top: 47px;
+  }
 }
 .form__filter-button {
   width: 100%;
@@ -524,7 +630,7 @@ padding: 15px 18px;
   margin-top: 43px;
   margin-bottom: 0;
 }
-@media (min-width: @desktop-width){
-  margin-top: 40px;
+@media (min-width: @desktop-width) {
+  margin-top: 33px;
 }
 }

@@ -11,16 +11,12 @@ body{
 }
 
 .page__container {
-  
   @media (min-width:@tablet-width) {
-
     padding: 0 50px;
   }
   @media (min-width:@desktop-width) {
-
     padding: 0 70px;
   }
-
 }
 
 .visually-hidden {
@@ -89,3 +85,25 @@ img {
   }
 }
 
+//----------------зеленая кнопка в модальном окне-----//
+.green-button{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 68px;
+  background-color: @green;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  margin: 31px auto 46px;
+  cursor: pointer;
+  @media (min-width:  @tablet-width) {
+    max-width: 350px;
+    margin: 28px auto 48px;
+  }
+  &:hover{
+    background-color: @deepgreen;
+  }
+  &:active{
+    opacity: 0.5;
+  }
+}

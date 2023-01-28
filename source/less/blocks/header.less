@@ -1,12 +1,12 @@
 .header {
-position: relative;
+  position: relative;
   width: auto;
   height: 79px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 22px 0;
-  background-color: #fff;
+  background-color: #ffffff;
   border-bottom: 1px solid #ECECEC;
 
   @media (min-width: @tablet-width) {
@@ -19,15 +19,14 @@ position: relative;
   }
   @media (min-width: @desktop-width) {
     grid-template-rows: 88px 46px;
-   
-
-
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 22px;
   }
 }
 
 
-
-//---------кнопка-бургер nav--closed nav--opened------------//
+//---------кнопка-бургер header--closed header--opened------------//
 .header__toggle {
   position: absolute;
   top: 32px;
@@ -44,7 +43,7 @@ position: relative;
   }
 }
 
-.header__nav--closed .header__toggle::before{
+.header--closed .header__toggle::before{
 content: "";
 position: absolute;
 top: 0;
@@ -55,12 +54,12 @@ background-color: black;
 box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000;
 }
 
-.header__nav--closed .header__toggle:active::before {
+.header--closed .header__toggle:active::before {
   background-color: fade(#000, 30%);
   box-shadow: 0 6px 0 0 fade(#000000, 30%),  0 12px 0 0 fade(#000000, 30%);
 }
 
-.header__nav--opened .header__toggle {
+.header--opened .header__toggle {
   top: 30px;
   right: 1px;
 
