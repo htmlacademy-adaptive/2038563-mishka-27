@@ -14,74 +14,75 @@
   display: flex;
 }
 
-.modal__container{
-   display: block;
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    padding: 28px 30px 40px 30px;
-    background-color: #ffffff;
-    border: 1px solid #C6C6C6;
-    box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
-    @media (min-width:  @tablet-width) {
-      max-width: 565px;
-      padding: 46px 106px;
-    }
+.modal__container {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 28px 30px 40px 30px;
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (min-width: @tablet-width) {
+    max-width: 565px;
+    padding: 46px 106px;
+  }
 }
 
+.modal__title {
 
-.modal__title{
-
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 30px;
-}
-.modal__subtitle{
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 30px;
-    text-align: center;
-}
-.modal__list{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 21px;
-    gap: 7px;
-
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
 }
 
+.modal__subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
 
-.radio-size__label{
+.modal__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 21px;
+  gap: 7px;
+}
+
+.radio-size__label {
   display: block;
   min-width: 82px;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 16px;
-    border:  1px solid #C6C6C6;
-    padding: 18px 28px;
-    text-align: center;
-    @media (min-width:  @tablet-width) {
-    flex-grow: 1;
-    }
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  border: 1px solid #c6c6c6;
+  padding: 18px 28px;
+  text-align: center;
 
-  &:hover{
-  outline: 2px solid @lightgrey;
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
   }
-  &:active{
+
+  &:hover {
+    outline: 2px solid @lightgrey;
+  }
+
+  &:active {
     outline: 2px solid @green;
-}
+  }
 }
 
 .radio-size__input:checked + .radio-size__label {
   border-color: @green;
 }
 
-.modal__button{
-    margin-top: 31px;
-    flex-grow: 1;
+.modal__button {
+  margin-top: 31px;
+  flex-grow: 1;
 }
-

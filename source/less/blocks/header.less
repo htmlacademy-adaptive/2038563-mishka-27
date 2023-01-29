@@ -7,7 +7,7 @@
   align-items: center;
   padding: 22px 0;
   background-color: #ffffff;
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #e5e5e5;
 
   @media (min-width: @tablet-width) {
     height: 89px;
@@ -17,6 +17,7 @@
     border: none;
     padding: 0 50px;
   }
+
   @media (min-width: @desktop-width) {
     grid-template-rows: 88px 46px;
     max-width: 1150px;
@@ -25,6 +26,192 @@
   }
 }
 
+.header__menu-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.header__logo {
+  width: 86px;
+  height: 35px;
+  margin-left: 115px;
+
+  @media (min-width: @tablet-width) {
+    width: 113px;
+    height: 46px;
+    margin-left: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+    height: 72px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+  }
+
+  //-----------------------aлтивность лого--------------------//
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.header__menu-list.menu-list-2 {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-top: 20px;
+    padding-right: 103px;
+    font-size: 15px;
+  }
+}
+
+.header__menu-list.menu-list-3 {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 340px;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    padding-bottom: 0;
+    font-size: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 475px;
+    padding-bottom: 0;
+    padding-right: 27px;
+    padding-left: 107px;
+  }
+}
+
+.header__menu-list-item {
+  font-weight: 700;
+  line-height: 24px;
+}
+
+
+.header__menu-list-link.search-link {
+  @media (min-width: @tablet-width) {
+    display: none;
+    width: 60px;
+  }
+}
+
+.header__subtitle {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    margin: 0;
+    padding-top: 8px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    padding-top: 20px;
+    padding-right: 30px;
+  }
+}
+
+//------зеленые иконки хедера--------//
+
+.header__icon {
+  fill: #000000;
+  opacity: 0.2;
+
+  &:hover {
+    fill: @green;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @green;
+    opacity: 0.3;
+  }
+}
+
+//----------------активность   ссылок--------------------------//
+.header__menu-list-item a[href] {
+  @media (min-width: @tablet-width) {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+/*----------------серые бордюры--------*/
+
+
+.header__menu-list-2::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #e5e5e5;
+    top: 0;
+    left: 454px;
+
+    @media (min-width: @desktop-width) {
+      left: 238px;
+    }
+  }
+}
+
+.header__menu-list-3::after {
+  @media (min-width: @tablet-width) {
+
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: #e5e5e5;
+    top: 0;
+    right: 400px;
+
+    @media (min-width: @desktop-width) {
+      right: 312px;
+    }
+  }
+}
+
+.header__menu-list-3::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: #e5e5e5;
+    top: 0;
+    right: 312px;
+  }
+}
 
 //---------кнопка-бургер header--closed header--opened------------//
 .header__toggle {
@@ -43,44 +230,46 @@
   }
 }
 
-.header--closed .header__toggle::before{
-content: "";
-position: absolute;
-top: 0;
-right: 1px;
-width: 20px;
-height: 2px;
-background-color: black;
-box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000;
+.header--closed .header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 1px;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
 }
 
 .header--closed .header__toggle:active::before {
-  background-color: fade(#000, 30%);
-  box-shadow: 0 6px 0 0 fade(#000000, 30%),  0 12px 0 0 fade(#000000, 30%);
+  background-color: fade(#000000, 30%);
+  box-shadow: 0 6px 0 0 fade(#000000, 30%), 0 12px 0 0 fade(#000000, 30%);
 }
 
 .header--opened .header__toggle {
   top: 30px;
   right: 1px;
 
-&::before,
-&::after{
-  content:"";
-  position: absolute;
-  width: 21px;
-  height: 2px;
-  background-color: #000;
-}
-    &::before {
-      transform: rotate(45deg) ;
-      box-shadow: none;
-}
-    &::after {
-      transform: rotate(-45deg);
-    }
-&:active::before,
-&:active::after {
-  background-color: fade(#000, 30%);
-}
-}
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    background-color: #000000;
+  }
 
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#000000, 30%);
+  }
+}

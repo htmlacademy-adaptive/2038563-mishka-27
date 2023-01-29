@@ -1,0 +1,31 @@
+.social-links__social-link {
+  text-decoration: none;
+}
+
+.social-links::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 80%;
+  left: 36px;
+  border-bottom: 1px solid #e5e5e5;
+  top: 45%;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+//--------------зеленые svgшки----------------..
+.social-links__logo-img {
+  fill: #000000;
+}
+
+&:hover {
+  fill: #46c1ae;
+}
+
+&:active {
+  fill: #63d1bb;
+  opacity: 0.3;
+}

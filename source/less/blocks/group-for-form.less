@@ -1,0 +1,129 @@
+//--------------квадратные кнопки----------------//
+.group-color {
+  @media (min-width: @tablet-width) {
+    background-color: #f1f1f1;
+    padding-left: 170px;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 41px 30px 7px 225px;
+    margin-top: 0;
+  }
+}
+
+/*----------------фио---------------*/
+
+.group-name {
+  @media (min-width: @tablet-width) {
+    padding-left: 215px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 172px;
+    padding-right: 149px;
+    padding-bottom: 47px;
+    padding-top: 18px;
+  }
+}
+
+
+/*------------тел и маил----------*/
+
+.group-tel {
+  padding-top: 16px;
+  padding-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 55px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 45px;
+  }
+}
+
+.group-mail {
+  @media (min-width: @tablet-width) {
+    padding-top: 30px;
+    padding-bottom: 48px;
+  }
+}
+
+.group-mail,
+.group-tel {
+  @media (min-width: @tablet-width) {
+    background-color: #f1f1f1;
+    padding-left: 215px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+}
+
+.group-tel::after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/mobile/form/form-phone.svg");
+  display: block;
+  right: 37px;
+  top: 32px;
+  width: 25px;
+  height: 24px;
+
+  @media (min-width: @tablet-width) {
+    right: 75px;
+    top: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 233px;
+    top: 63px;
+  }
+}
+
+.group-mail::after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/mobile/form/form-mail.svg");
+  display: block;
+  right: 33px;
+  top: 38px;
+  width: 32px;
+  height: 21px;
+
+  @media (min-width: @tablet-width) {
+    right: 73px;
+    top: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 230px;
+    top: 42px;
+  }
+}
+
+/*----------комментарий-----------------*/
+.group-comment {
+  margin-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 215px;
+    padding-right: 50px;
+    margin-top: 0;
+    padding-top: 36px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 226px;
+    padding-left: 224px;
+    padding-top: 27px;
+  }
+}

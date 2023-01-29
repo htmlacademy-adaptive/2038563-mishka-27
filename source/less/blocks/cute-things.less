@@ -1,11 +1,11 @@
 .cute-things {
   padding-top: 74px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   background-image: url("../img/mobile/bgd-title-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 50% -16px;
   background-size: 50%;
-  border-top: 1px solid #ECECEC;
+  border-top: 1px solid #ececec;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/mobile/cute-things@2x.jpg");
@@ -20,7 +20,6 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/desktop/cute-things/bgd-desktop@2x.jpg");
       background-size: contain;
-
     }
   }
 
@@ -28,27 +27,25 @@
     background-position: 50% 0;
     background-size: contain;
     padding-top: 114px;
+  }
+}
 
+.cute-things__list::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: url("");
+    background-image: url("../img/my-zig-zag.svg");
+    background-repeat: repeat-x;
+    background-size: 42px 24px;
+    left: 0;
+    right: 0;
+    bottom: 70px;
   }
 
-  .cute-things__list::after {
-    @media (min-width: @tablet-width) {
-      position: absolute;
-      content: url("");
-      background-image: url("../img/my-zig-zag.svg");
-      background-repeat: repeat-x;
-      background-size: 42px 24px;
-      left: 0;
-      right: 0;
-      bottom: 70px;
-    }
-
-    @media (min-width: @desktop-width) {
-      background-size: 63px 36px;
-      left: 35px;
-      bottom: 80px;
-
-    }
+  @media (min-width: @desktop-width) {
+    background-size: 63px 36px;
+    left: 35px;
+    bottom: 20px;
   }
 }
 
@@ -111,7 +108,6 @@
   }
 }
 
-
 .cute-things__item:nth-child(even) {
   background-color: @deepgreen;
 }
@@ -130,68 +126,4 @@
     font-size: 20px;
     line-height: 30px;
   }
-}
-
-.link-interior::after {
-  position: absolute;
-  content: url("../img/mobile/lamp-svg.svg");
-  display: block;
-  width: 40px;
-  height: 62px;
-  left: 210px;
-  top: 1px;
-  opacity: 0.5;
-
-  @media (min-width: @tablet-width) {
-    left: 220px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 411px;
-  }
-}
-
-.link-toys::after {
-  position: absolute;
-  content: url("../img/mobile/lego-svg.svg");
-  display: block;
-  width: 60px;
-  height: 60px;
-  right: -130px;
-  top: 3px;
-  opacity: 0.5;
-
-  @media (min-width: @tablet-width) {
-    left: 200px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 393px;
-  }
-}
-
-.cute-things__item:hover .link-interior::after,
-.cute-things__item:hover .link-toys::after {
-  opacity: 0.7;
-}
-
-.cute-things__item:active .link-interior::after,
-.cute-things__item:active .link-toys::after {
-  opacity: 0.3;
-}
-
-.cute-things__item:hover {
-  margin-top: -5px;
-  padding-bottom: 37px;
-  padding-top: 19px;
-}
-
-.cute-things__link:active+.link-toys::after,
-.cute-things__link:active+.link-interior::after {
-  opacity: 0.3;
-}
-
-.cute-things__link:hover+.link-toys::after,
-.cute-things__link:hover+.link-interior::after {
-  opacity: 0.7;
 }

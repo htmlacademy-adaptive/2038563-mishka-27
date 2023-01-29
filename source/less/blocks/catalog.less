@@ -18,49 +18,6 @@
   }
 }
 
-.catalog__main-title {
-  position: relative;
-  width: 100%;
-  height: 177px;
-  background-color: @lightgrey;
-  padding-top: 20px;
-  z-index: -1;
-
-  @media (min-width: @tablet-width) {
-    height: 238px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 272px;
-  }
-
-  &::after {
-    @media (min-width: @tablet-width) {
-      position: absolute;
-      content: url("");
-      background-image: url("../img/my-zig-zag.svg");
-      background-repeat: repeat-x;
-      background-size: 42px 24px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-
-    }
-
-    @media (min-width: @desktop-width) {
-      background-size: 63px 36px;
-    }
-  }
-}
-
-.catalog__title {
-  margin: 55px auto 74px;
-  text-align: center;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 83px;
-  }
-}
 
 .catalog__card-product {
   margin-top: 28px;
@@ -144,7 +101,7 @@
   }
 }
 
-.card-product-price__inner {
+.catalog__card-product-price__inner {
   display: flex;
   justify-content: space-between;
   padding-top: 22px;
@@ -178,7 +135,7 @@
   }
 }
 
-.card-product-curt {
+.catalog__card-product-curt {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -189,13 +146,13 @@
   fill: #000000;
   opacity: 0.8;
   cursor: pointer;
-}
 
-.catalog__card-product-img:hover {
-  fill: @green;
-  opacity: 1;
-}
+  &:hover {
+    fill: @green;
+    opacity: 1;
+  }
 
-.catalog__card-product-img:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }

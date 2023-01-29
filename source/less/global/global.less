@@ -1,72 +1,62 @@
-.page{
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-body{
-  margin: 0;
-}
-
-.page__container {
-  @media (min-width:@tablet-width) {
-    padding: 0 50px;
-  }
-  @media (min-width:@desktop-width) {
-    padding: 0 70px;
-  }
+.desktop-container {
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
 .visually-hidden {
-position: absolute;
-width: 1px;
-height: 1px;
-margin: -1px;
-padding: 0;
-border: 0;
-clip: rect(0 0 0 0);
-overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
 //-------------картинки---------------//
 img {
   max-width: 100%;
   height: auto;
 }
+
 //----------------список обнуление------------//
-.list{
+.list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+
 .link {
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
+
 //-----------кнопка-------//
 .button {
   width: 260px;
   box-sizing: border-box;
-  color: #444;
-  border: 2px solid #444;
+  color: #444444;
+  border: 2px solid #444444;
   padding: 16px 65px;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   cursor: pointer;
 }
-.button:hover  {
+
+.button:hover {
   background-color: rgba(68, 68, 68, 1);
-  color:#fff;
+  color: #ffffff;
   opacity: 1;
 }
+
 .button:active {
   font-size: 17px;
-  color: #7C7C7C;
+  color: #7c7c7c;
 }
 
 
@@ -75,18 +65,20 @@ img {
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
-  @media (min-width: @tablet-width){
+
+  @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
   }
-  @media (min-width: @desktop-width){
+
+  @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
   }
 }
 
 //----------------зеленая кнопка в модальном окне-----//
-.green-button{
+.green-button {
   width: 100%;
   box-sizing: border-box;
   padding: 18px 68px;
@@ -96,14 +88,17 @@ img {
   border: none;
   margin: 31px auto 46px;
   cursor: pointer;
-  @media (min-width:  @tablet-width) {
+
+  @media (min-width: @tablet-width) {
     max-width: 350px;
     margin: 28px auto 48px;
   }
-  &:hover{
+
+  &:hover {
     background-color: @deepgreen;
   }
-  &:active{
+
+  &:active {
     opacity: 0.5;
   }
 }
