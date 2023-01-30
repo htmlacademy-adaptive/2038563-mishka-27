@@ -1,0 +1,145 @@
+//--------------квадратные кнопки----------------//
+.group-color {
+  @media (min-width: @tablet-width) {
+    background-color: #f1f1f1;
+    padding-left: 170px;
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 56px 24px 173px;
+    margin-top: 0;
+  }
+}
+
+/*----------------фио---------------*/
+
+.group-name {
+  @media (min-width: @tablet-width) {
+    padding-left: 215px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 172px;
+    padding-right: 149px;
+    padding-bottom: 47px;
+    padding-top: 29px;
+  }
+}
+
+
+/*------------тел и маил----------*/
+
+.group-tel {
+  padding-top: 16px;
+  padding-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 55px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 45px;
+  }
+}
+
+.group-mail {
+  @media (min-width: @tablet-width) {
+    padding-top: 26px;
+    padding-bottom: 48px;
+  }
+}
+
+.group-mail,
+.group-tel {
+  @media (min-width: @tablet-width) {
+    background-color: #f1f1f1;
+    padding-left: 215px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+}
+
+.group-tel::after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/mobile/form/form-phone.svg");
+  display: block;
+  right: 37px;
+  top: 32px;
+  width: 25px;
+  height: 24px;
+
+  @media (min-width: @tablet-width) {
+    right: 75px;
+    top: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 181px;
+    top: 60px;
+  }
+}
+
+.group-mail::after {
+  position: absolute;
+  content: url("../img/mobile/form/form-mail.svg");
+  display: block;
+  right: 33px;
+  top: 38px;
+  width: 32px;
+  height: 21px;
+
+  @media (min-width: @tablet-width) {
+    right: 73px;
+    top: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 180px;
+    top: 42px;
+  }
+}
+
+//---------------------активность зеленая иконка tel,mail------------//
+
+.control__input [type="email"]:hover + .group-mail::after {
+  content: url("../img/mobile/form/email-green.svg");
+}
+
+.control__input [type="tel"]:hover + .group-tel::after {
+  content: url("../img/mobile/form/phone-green.svg");
+}
+
+.control__input [type="tel"]:active + .group-tel::after,
+.control__input [type="email"]:active + .group-mail::after {
+  content: "";
+}
+
+
+/*----------комментарий-----------------*/
+.group-comment {
+  margin-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 215px;
+    padding-right: 50px;
+    margin-top: 0;
+    padding-top: 46px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 175px;
+    padding-left: 175px;
+    padding-top: 27px;
+  }
+}

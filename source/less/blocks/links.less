@@ -1,0 +1,66 @@
+//-----------псевдоэлементы на зеленыхкнопках cute-things-----//
+.link-interior::after {
+  position: absolute;
+  content: url("../img/mobile/lamp-svg.svg");
+  display: block;
+  width: 40px;
+  height: 62px;
+  left: 210px;
+  top: 1px;
+  opacity: 0.5;
+
+  @media (min-width: @tablet-width) {
+    left: 220px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 411px;
+  }
+}
+
+.link-toys::after {
+  position: absolute;
+  content: url("../img/mobile/lego-svg.svg");
+  display: block;
+  width: 60px;
+  height: 60px;
+  right: -130px;
+  top: 3px;
+  opacity: 0.5;
+
+  @media (min-width: @tablet-width) {
+    left: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 393px;
+  }
+}
+
+.cute-things__item:hover .link-interior::after,
+.cute-things__item:hover .link-toys::after {
+  opacity: 0.7;
+}
+
+.cute-things__item:active .link-interior::after,
+.cute-things__item:active .link-toys::after {
+  opacity: 0.3;
+}
+
+.cute-things__item:hover {
+  margin-top: -5px;
+  padding-bottom: 37px;
+  padding-top: 19px;
+}
+
+.cute-things__link:active + .link-toys::after,
+.cute-things__link:active + .link-interior::after {
+  opacity: 0.3;
+}
+
+.cute-things__link:hover + .link-toys::after,
+.cute-things__link:hover + .link-interior::after {
+  opacity: 0.7;
+}
+
+//----------------------------------------------------------//

@@ -1,0 +1,161 @@
+.control__input {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+  padding: 17px 10px 12px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #444444;
+  width: 100%;
+}
+
+//------------------------радио-кнопки----------------------//
+.control__input[type="radio"] + .control__mark {
+  position: absolute;
+  border-radius: 50%;
+  left: -65px;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #444444;
+  cursor: pointer;
+  top: -2px;
+
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  position: absolute;
+  background-color: @green;
+  border-radius: 50%;
+  content: "";
+  top: 10px;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    height: 22px;
+    top: 13px;
+    left: 13px;
+  }
+}
+//-----------------------------
+.control__input[type="radio"]:hover + .control__mark {
+  border: 2px solid @green;
+}
+
+.control__input[type="radio"]:active + .control__mark {
+  border: 2px solid @lightgrey;
+}
+
+.control__mark:hover {
+  border: 2px solid @green;
+}
+
+.control__mark:active {
+  border: 2px solid @lightgrey;
+}
+//----------------------------------------------------//
+.control__input[type="checkbox"] + .control__mark {
+  position: absolute;
+  left: -65px;
+  top: 7px;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #444444;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+  position: absolute;
+  background-image: url("../img/mobile/form/Tick-mob.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/desktop/form/Tick-desktop.svg");
+  }
+}
+//-----------------------------------------------------------//
+.control__input[type="checkbox"]:checked:hover + .control__mark {
+  border: 2px solid @green;
+}
+
+.control__input[type="checkbox"]:hover + .control__mark {
+  border: 2px solid @green;
+}
+
+.control__input[type="checkbox"]:checked:active + .control__mark {
+  border: 2px solid @lightgrey;
+}
+
+.control__input[type="checkbox"]:active + .control__mark {
+  border: 2px solid @lightgrey;
+}
+
+//-------------------------------------//
+.control__input[type="text"] {
+  padding: 22px 10px 13px;
+}
+
+.control__input[type="tel"] {
+  padding-top: 23px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.control__input[type="email"] {
+  padding-left: 20px;
+}
+
+//----------------------у input активность зеленые border--------//
+.control__input[type="text"],
+.control__input[type="tel"],
+.control__input[type="email"] {
+  &::-webkit-input-placeholder {
+    color: #000000;
+    opacity: 0.3;
+  }
+
+  &::-moz-placeholder {
+    color: #000000;
+    opacity: 0.3;
+  }
+
+  &:active::-webkit-input-placeholder {
+    color: @darkgrey;
+  }
+
+  &:active::-moz-placeholder {
+    color: @darkgrey;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    border-bottom: 2px solid @green;
+  }
+
+  &:active {
+    border-bottom: 2px solid @green;
+  }
+}
