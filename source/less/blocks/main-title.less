@@ -1,18 +1,18 @@
 //------------------------заголовок catalog page2-------------------//
-.main-title-inner {
+.main-title {
   position: relative;
   width: 100%;
-  height: 177px;
   background-color: @lightgrey;
-  padding-top: 20px;
-  z-index: -1;
+  padding: 74px 0 73px 0;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
-    height: 238px;
+    padding: 55px 0px 86px;
+    margin-bottom: 119px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 272px;
+    padding: 55px 0px 106px;
   }
 
   &::after {
@@ -22,7 +22,7 @@
       background-image: url("../img/my-zig-zag.svg");
       background-repeat: repeat-x;
       background-size: 42px 24px;
-      bottom: 47px;
+      bottom: 0;
       left: 0;
       right: 0;
     }
@@ -33,11 +33,12 @@
   }
 }
 
-.main-title {
-  margin: 55px auto 74px;
+.main-title__inner {
+  width: 300px;
+  margin: 0 auto;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-top: 35px;
+    width: 500px;
   }
 }
