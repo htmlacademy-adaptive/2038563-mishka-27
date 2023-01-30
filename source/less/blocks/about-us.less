@@ -55,174 +55,175 @@
       width: 100%;
     }
   }
-}
 
-.about-us__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-top: 0;
-  padding-left: 30px;
-  padding-right: 30px;
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
 
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-    max-width: 636px;
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      max-width: 636px;
+      padding: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      justify-self: flex-start;
+      max-width: @tablet-width;
+      margin: 0 auto;
+      padding-left: 32px;
+      padding-right: 28px;
+      gap: 0 51px;
+    }
+  }
+
+  .about-us__item {
+    display: block;
+    max-width: 300px;
+  }
+
+  .about-us__text {
+    margin: 0;
     padding: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    justify-self: flex-start;
-    max-width: @tablet-width;
-    margin: 0 auto;
-    padding-left: 32px;
-    padding-right: 28px;
-    gap: 0 51px;
-  }
-}
-
-.about-us__item {
-  display: block;
-  max-width: 300px;
-}
-
-.about-us__text {
-  margin: 0;
-  padding: 0;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 22px;
-  }
-}
-
-.about-us__img-1 {
-  position: relative;
-  margin-top: 62px;
-  margin-bottom: 80px;
-
-  @media (min-width: @tablet-width) {
-
-    margin-top: 65px;
-    margin-bottom: 33px;
-  }
-
-  &::before {
-    position: absolute;
-    content: url("../img/desktop/about-us/flover.svg");
-    display: block;
-    width: 33px;
-    height: 38px;
-    bottom: 60px;
-    left: 6px;
-    @media (min-width: @tablet-width) {
-      bottom: 89px;
-    }
-  }
-}
-
-.about-us__img-2 {
-  position: relative;
-  margin-bottom: 84px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 47px;
-    margin-top: 67px;
-  }
-
-  &::before {
-    position: absolute;
-    content: url("../img/desktop/about-us/money.svg");
-    display: block;
-    width: 47px;
-    height: 27px;
-    bottom: 67px;
-    left: 3px;
-  }
-}
-
-.about-us__img-3 {
-  position: relative;
-  margin-bottom: 82px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 59px;
-  }
-
-  &::before {
-    position: absolute;
-    content: url("../img/desktop/about-us/heart.svg");
-    display: block;
-    width: 34px;
-    height: 27px;
-    bottom: 63px;
-    left: 6px;
-  }
-}
-
-.about-us__img-4 {
-  position: relative;
-  margin-bottom: 82px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 64px;
-    margin-bottom: 49px;
-  }
-
-  &::before {
-    position: absolute;
-    content: url("../img/desktop/about-us/clew.svg");
-    display: block;
-    width: 28px;
-    height: 22px;
-    bottom: 70px;
-    left: 6px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
 
     @media (min-width: @tablet-width) {
-      bottom: 110px;
+      font-size: 20px;
+      line-height: 22px;
     }
   }
-}
 
-.about-us__img-5 {
-  position: relative;
-  margin-bottom: 82px;
+  .about-us__img-1 {
+    position: relative;
+    margin-top: 62px;
+    margin-bottom: 80px;
 
-  @media (min-width: @tablet-width) {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    @media (min-width: @tablet-width) {
+
+      margin-top: 65px;
+      margin-bottom: 33px;
+    }
+
+    &::before {
+      position: absolute;
+      content: url("../img/desktop/about-us/flover.svg");
+      display: block;
+      width: 33px;
+      height: 38px;
+      bottom: 60px;
+      left: 6px;
+
+      @media (min-width: @tablet-width) {
+        bottom: 89px;
+      }
+    }
   }
 
-  &::before {
-    position: absolute;
-    content: url("../img/desktop/about-us/rocket.svg");
-    display: block;
-    width: 41px;
-    height: 23px;
-    bottom: 68px;
-    left: 0;
+  .about-us__img-2 {
+    position: relative;
+    margin-bottom: 84px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 47px;
+      margin-top: 67px;
+    }
+
+    &::before {
+      position: absolute;
+      content: url("../img/desktop/about-us/money.svg");
+      display: block;
+      width: 47px;
+      height: 27px;
+      bottom: 67px;
+      left: 3px;
+    }
   }
-}
 
-.about-us__img-6 {
-  position: relative;
-  margin-bottom: 3px;
+  .about-us__img-3 {
+    position: relative;
+    margin-bottom: 82px;
 
-  @media (min-width: @tablet-width) {
-    margin-top: 31px;
+    @media (min-width: @tablet-width) {
+      margin-top: 59px;
+    }
+
+    &::before {
+      position: absolute;
+      content: url("../img/desktop/about-us/heart.svg");
+      display: block;
+      width: 34px;
+      height: 27px;
+      bottom: 63px;
+      left: 6px;
+    }
   }
 
-  &::before {
-    position: absolute;
-    content: url("../img/desktop/about-us/gift.svg");
-    display: block;
-    width: 33px;
-    height: 32px;
-    bottom: 60px;
-    left: 2px;
+  .about-us__img-4 {
+    position: relative;
+    margin-bottom: 82px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 64px;
+      margin-bottom: 49px;
+    }
+
+    &::before {
+      position: absolute;
+      content: url("../img/desktop/about-us/clew.svg");
+      display: block;
+      width: 28px;
+      height: 22px;
+      bottom: 70px;
+      left: 6px;
+
+      @media (min-width: @tablet-width) {
+        bottom: 110px;
+      }
+    }
+  }
+
+  .about-us__img-5 {
+    position: relative;
+    margin-bottom: 82px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    &::before {
+      position: absolute;
+      content: url("../img/desktop/about-us/rocket.svg");
+      display: block;
+      width: 41px;
+      height: 23px;
+      bottom: 68px;
+      left: 0;
+    }
+  }
+
+  .about-us__img-6 {
+    position: relative;
+    margin-bottom: 3px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 31px;
+    }
+
+    &::before {
+      position: absolute;
+      content: url("../img/desktop/about-us/gift.svg");
+      display: block;
+      width: 33px;
+      height: 32px;
+      bottom: 60px;
+      left: 2px;
+    }
   }
 }
